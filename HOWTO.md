@@ -1,5 +1,30 @@
 # Instrucciones de edición
 
+El proyecto utiliza [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) para desplegar el contenido como una página web, a modo de documentación.
+
+## Ejecución del proyecto
+
+Las [instrucciones de ejecución](https://squidfunk.github.io/mkdocs-material/getting-started/) de Material son útiles, sin embargo posiblemente se reduce a tres pasos en la terminal de comandos:
+
+1. Instalar el paquete [mkdocs-material](https://pypi.org/project/mkdocs-material/) con [pip](https://pypi.org/project/pip/) en el ambiente local de desarrollo de Python (por ejemplo, [Anaconda](https://www.anaconda.com/download)):
+
+```bash
+pip install mkdocs-material
+```
+
+2. Clonar el proyecto (dentro del directorio deseado):
+
+```bash
+git clone https://github.com/fabianabarca/mpss.git
+```
+
+3. En el mismo directorio donde está el archivo `mkdocs.yml` dentro del repositorio local (`cd mpss/`), ejecutar MkDocs:
+
 ```bash
 mkdocs serve
 ```
+
+el cual correrá un servidor local con el sitio web disponible en http://127.0.0.1:8000/ (por defecto, aunque puede cambiar).
+
+## Edición del contenido
+
