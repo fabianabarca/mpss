@@ -1,3 +1,7 @@
-### ¿Qué es y para qué sirve la probabilidad?
+### Presentación
 
-La probabilidad es una *medida* de la certidumbre de ocurrencia de un evento.
+[1 - La probabilidad](https://www.overleaf.com/read/xgkxwrrksrvh#7dad07)
+
+### Secciones
+
+- Teoría de conjuntos (1 - 19)

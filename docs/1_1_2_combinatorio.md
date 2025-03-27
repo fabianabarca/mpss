@@ -4,4 +4,4 @@
 
 ### Secciones
 
-- Teoría de conjuntos (1 - 19)
+- Algunos resultados útiles del análisis combinatorio (20 - 30)
