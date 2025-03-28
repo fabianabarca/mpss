@@ -1,52 +1,71 @@
 # Instrucciones de edición
 
-El proyecto utiliza [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) para desplegar el contenido como una página web, a modo de documentación.
+El proyecto utiliza [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) para mostrar el contenido como una página web, a modo de documentación.
 
 ## Ejecución del proyecto
 
-Las [instrucciones de ejecución](https://squidfunk.github.io/mkdocs-material/getting-started/) de Material son útiles, sin embargo posiblemente se reduce a tres pasos en la terminal de comandos:
+Las [instrucciones de ejecución](https://squidfunk.github.io/mkdocs-material/getting-started/) de Material son útiles, sin embargo posiblemente se reduce a los siguientes pasos en la terminal de comandos:
 
-1. Configurar las credenciales de Git en el sistema local, con los siguientes comandos
-```bash
-git config --global user.name "Nombre Apellido"
-```
-```bash
-git config --global user.email "your-email@example.com"
-```
-De forma que quede vinculado con su cuenta de Github
-
-2. Crear un [ambiente] de python para poder ejecutar la instalación de librerías, para ello sitúese en el directorio raíz del proyecto (carpeta en donde copió el repositorio) y ejecute el comando:
-
-```bash
-python3 -m venv nombre_de_su_entorno
-```
-El nombre no es importante, puede elegir el de su preferencia. Recuerde **siempre**, antes de trabajar, activar el ambiente de python, de lo contrario se generarán errores. Para ello utilice el siguiente comando
-
-```bash
-source mi_entorno/bin/activate
-```
+**Nota**: ver la sección [sobre Git y el ambiente virtual de Python](#sobre-git-y-el-ambiente-virtual-de-trabajo).
 
 
-3. Instalar el paquete [mkdocs-material](https://pypi.org/project/mkdocs-material/) con [pip](https://pypi.org/project/pip/) en el ambiente local de desarrollo de Python (por ejemplo, [Anaconda](https://www.anaconda.com/download)):
+1. Instalar el paquete [mkdocs-material](https://pypi.org/project/mkdocs-material/) con [pip](https://pypi.org/project/pip/) en el ambiente local de desarrollo de Python (por ejemplo, el instalado con [Anaconda](https://www.anaconda.com/download)):
 
 ```bash
 pip install mkdocs-material
 ```
 
-
-4. Clonar el proyecto (dentro del directorio deseado):
+2. Clonar el proyecto (dentro del directorio deseado):
 
 ```bash
 git clone https://github.com/fabianabarca/mpss.git
 ```
 
-5. En el mismo directorio donde está el archivo `mkdocs.yml` dentro del repositorio local (`cd mpss/`), ejecutar MkDocs:
+3. En el mismo directorio donde está el archivo `mkdocs.yml` dentro del repositorio local (`cd mpss/`), ejecutar MkDocs:
 
 ```bash
 mkdocs serve
 ```
 
 el cual correrá un servidor local con el sitio web disponible en http://127.0.0.1:8000/ (por defecto, aunque puede cambiar).
+
+### Sobre Git y el ambiente virtual de trabajo
+
+Podrían ser necesarios algunos pasos previos para usar Git y los paquetes de Python.
+
+1. Instalar Git y Python.
+
+2. Configurar las credenciales de Git en el sistema local, con los siguientes comandos:
+
+```bash
+git config --global user.name "Nombre Apellido"
+```
+
+```bash
+git config --global user.email "correo@ejemplo.com"
+```
+
+Así quedará vinculado con la cuenta personal de GitHub
+
+3. Crear un [ambiente virtual](https://docs.python.org/es/3.13/library/venv.html) de Python para instalar paquetes. Para esto, en el directorio raíz del proyecto (carpeta en donde está clonado el repositorio: `mpss/`, la misma donde está `mkdocs.yml`) ejecutar el comando:
+
+```bash
+python3 -m venv env
+```
+
+donde `env` es el nombre del entorno (si utiliza otro, recuerde agregarlo en el archivo `.gitignore`). Esto creará una carpeta `env/` con todos los archivos necesarios para correr los paquetes instalados de Python, que solo estarán disponibles cuando el ambiente virtual está activado.
+
+Recordar **siempre**, antes de trabajar, activar el ambiente virtual de Python:
+
+```bash
+source env/bin/activate
+```
+
+Y para desactivar:
+
+```bash
+deactivate
+```
 
 ## Edición del contenido
 
