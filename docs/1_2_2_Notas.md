@@ -4,4 +4,4 @@
 
 ### Secciones
 
-- Teoría de conjuntos (1 - 19)
+- Notas (16 - 35)

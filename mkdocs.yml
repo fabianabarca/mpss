@@ -3,7 +3,7 @@ site_name: Modelos Probabilísticos de Señales y Sistemas
 nav:
   - Inicio: index.md
   - La probabilidad: 
-    - Introducción: 1_0_introduccion.md
+    - Introducción: 0_0_introduccion.md
     - Teoría de conjuntos: 1_1_1_conjuntos.md
     - Análisis combinatorio: 1_1_2_combinatorio.md
   - Variables aleatorias:

@@ -1,1 +1,0 @@
-En muchos experimentos, las observaciones no son una sola cantidad, sino un grupo o familia de cantidades. Por tanto, se construyen variables aleatorias múltiples, llamados vectores aleatorios.
