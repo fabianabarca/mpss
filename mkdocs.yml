@@ -14,9 +14,9 @@ nav:
       - ¿Qué es y para qué sirve la probabilidad?: 1_2_1_la_probabilidad.md
       - Notas: 1_2_2_Notas.md  
 
-    - 2-Probabilidad conjunta, condicional y teorema de bayes:
+    - 2-Probabilidad conjunta, condicional y teorema de Bayes:
       - Introducción, probabilidad conjunta y probabilidad total: 2_0_1_conjunta_total.md
-      - Teorema de bayes: 2_0_2_bayes.md
+      - Teorema de Bayes: 2_0_2_bayes.md
 
     - 3-Eventos independientes y pruebas de Bernoulli:
       - Eventos independientes: 3_0_1_eventos_Independientes.md
