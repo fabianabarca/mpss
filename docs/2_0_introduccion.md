@@ -1,0 +1,1 @@
+Las variables aleatorias facilitan una manipulación numérica más robusta de los fenómenos aleatorios, y permiten extender el análisis a muchos más casos que los vistos hasta ahora. Herramientas como las funciones de densidad y de distribución acumulativa de probabilidad proveen descripciones completas de los modelos probabilísticos.
