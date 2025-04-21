@@ -2,16 +2,99 @@ site_name: Modelos Probabilísticos de Señales y Sistemas
 
 nav:
   - Inicio: index.md
-  - La probabilidad: 
+
+  - (I) Introducción a la probabilidad:
     - Introducción: 1_0_introduccion.md
-    - Teoría de conjuntos: 1_1_1_conjuntos.md
-    - Análisis combinatorio: 1_1_2_combinatorio.md
-  - Variables aleatorias:
+    - Definiciones preliminares:
+      - Teoría de conjuntos: 1_0_1_conjuntos.md
+      - Análisis combinatorio: 1_0_2_combinatorio.md
+    - La probabilidad:
+      - ¿Qué es y para qué sirve la probabilidad?: 1_1_1_la_probabilidad.md
+      - Notas: 1_1_2_notas.md  
+    - Probabilidad conjunta y condicional: 1_2_1_conjunta_total.md
+    - Teorema de Bayes: 1_2_2_bayes.md
+    - Eventos independientes: 1_3_1_eventos_independientes.md
+    - Pruebas repetidas de Bernoulli: 1_3_2_pruebas_bernoulli.md
+
+  - (II) Variables aleatorias:
     - Introducción: 2_0_introduccion.md
-  - Variables aleatorias conjuntas:
+    - Definiciones: 2_4_1_variables_aleatorias.md
+    - Función de probabilidad acumulativa: 2_4_2_funciones_distribucion_acumulativa.md
+    - Función de densidad de probabilidad: 2_4_3_funciones_probabilidad.md
+    - Algunas distribuciones comunes: 2_4_4_funciones_aplicacion_comun.md
+    - Funciones de distribución condicionales:
+      - Función acumulativa condicional: 2_5_1_funcion_acumulativa_condicional.md
+      - Casos especiales de la función acumulativa y sus ejemplos: 2_5_2_casos_especiales.md
+      - Función de densidad condicional: 2_5_3_funcion_densidad_condicional.md
+    - Momentos de una variable aleatoria:
+      - Valor esperado: 2_6_1_valor_esperado_va.md
+      - Momentos: 2_6_2_momentos_va.md     
+      - Funciones que dan momentos:
+        - Función generadora de momentos y función característica: 2_7_1_generadora_caracteristica.md
+        - Ejemplos para diferentes funciones: 2_7_2_ejemplos.md
+        - Ejemplo de determinación de la función característica I-VII: 2_7_3_ejemplos_de_determinacion.md
+        - Ejemplo de determinación de la función característica VIII-XII: 2_7_4_ejemplos_de_determinacion.md
+    - Transformaciones de una variable aleatoria:
+      - Ejemplos de disipación de potencia y de una variable aleatoria: 2_8_1_disipacion_potencia.md
+      - Transformaciones de una variable aleatoria: 2_8_2_transformaciones_va.md
+      - Transformaciones no monotónicas y sus ejemplos: 2_8_3_no_monotonicas.md
+
+  - (III) Variables aleatorias conjuntas:
     - Introducción: 3_0_introduccion.md
-  - Procesos aleatorios:
+    - Variables aleatorias múltiples: 
+      - Función de probabilidad acumulativa conjunta: 3_9_1_variable_aleatoria_multiple.md
+      - Función de densidad probabilística conjunta: 3_9_2_propiedades_acumulativa.md
+      - Propiedades de la función de densidad conjunta: 3_9_3_propiedades_densidad_conjunta.md
+      - Independencia estadística: 3_9_4_independencia_estadistica.md
+    - Momentos de las variables aleatorias múltiples:
+      - Valor esperado, momentos conjuntos alrededor del origen y correlación: 3_10_1_valor_esperado_momentos_correlacion.md
+      - Independencia, ortogonalidad y momentos centrales conjuntos: 3_10_2_independencia_ortogonalidad.md
+    - Transformaciones de variables aleatorias múltiples:
+      - Transformaciones de variables aleatorias múltiples: 3_11_1_transformacion_va_multiples.md
+      - Vida útil de un componente y distribución probabilística: 3_11_2_vida_util_y_distribucion.md
+    - Teorema del límite central, desigualdades de Chebyshev y Markov y ley de los grandes números:
+      - Teorema del límite central para sumas: 3_12_1_limite_central_sumas.md
+      - Teorema del límite central para muestras: 3_12_2_limite_central_muestras.md
+      - Desigualdad de Chebyshev: 3_12_3_desigualdad_chebyshev.md
+      - Desigualdad de Markov y ley de los números grandes: 3_12_4_desigualdad_markov.md
+
+  - (IV) Procesos aleatorios:
     - Introducción: 4_0_introduccion.md
+    - Procesos aleatorios:
+      - Definiciones y concepto de un proceso estocástico: 4_13_1_concepto_estocastico.md
+      - Clasificación de procesos: 4_13_2_clasificacion.md
+      - Funciones de distribución e independencia estadística: 4_13_3_funciones_distribucion.md
+      - Estacionaridad: 4_13_4_estacionaridad.md
+    - Ergodicidad y funciones de correlación:
+      - Promedios en el tiempo y ergodicidad: 4_14_1_ergodicidad.md
+      - Funciones de correlación y covarianza: 4_14_2_correlacion_covarianza.md
+      - Funciones de covarianza: 4_14_3_funciones_covarianza.md
+    - Características espectrales de los procesos aleatorios:
+      - Espectro de densidad de potencia y sus propiedades: 4_15_1_espectro_densidad.md
+      - Propiedades de la densidad espectral y definiciones de ruido: 4_15_2_propiedades.md
+    - Respuesta de sistemas lineales a una señal aleatoria:
+      - Respuesta del sistema y valor cuadrático medio: 4_16_1_respuesta.md
+      - Autocorrelaciones y características espectrales de la respuesta del sistema: 4_16_2_autocorrelacion_caracteristicas.md
+
+  - (V) Cadenas de Markov:
+    - Proceso contador de Poisson:
+      - Proceso aleatorio de Poisson y sus funciones de densidad: 5_17_1_proceso_funciones_poisson.md
+      - Momentos de la distribución de Poisson y probabildiad conjunta y condicional: 5_17_2_momento_densidad.md
+    - Cadenas de Markov en tiempo contínuo:
+      - Ejemplo de cadenas de Markov y deducción: 5_18_1_definicion_markov.md
+      - Proceso de nacimiento y muerte en tiempo contínuo: 5_18_2_nacimiento_muerte.md
+      - Teoría de colas: 5_18_3_teoria_de_colas.md
+    - Vector de probabilidad de estado estable: 
+      - Vector de probabilidad de estado estable: 5_19_1_vector_estable.md
+      - Cola de un solo servidor y de un número infinito: 5_19_2_cola_servidores.md
+      - Sistema de colas M/M/s: 5_19_3_sistema_colas_mms.md
+    - Cadenas de Markov en tiempo discreto:
+      - Cadenas de Markov en tiempo discreto: 5_20_1_markov_discreto.md
+      - La matriz de transición de orden t: 5_20_2_markov_discreto.md
+      - Ecuaciones de Chapman - Kolgomorov y Vector de probabilidad pt: 5_20_3_markov_discreto.md
+    - Cadenas de Markov en tiempo discreto y vector de estado estable:
+      - El vector probabilidad en estado estable: 5_21_1_markov_estado_estable.md
+      - Proceso cíclico: 5_21_2_markov_estado_estable.md
 
 theme:
   name: material

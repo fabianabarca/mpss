@@ -4,4 +4,4 @@
 
 ### Secciones
 
-- Teoría de conjuntos (1 - 19)
+- ¿Qué es y para qué sirve la probabilidad? (1 - 14)
