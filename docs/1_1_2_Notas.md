@@ -4,4 +4,4 @@
 
 ### Secciones
 
-- Notas (16 - 35)
+- Notas (15 - 27)

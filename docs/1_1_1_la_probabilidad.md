@@ -4,4 +4,4 @@
 
 ### Secciones
 
-- ¿Qué es y para qué sirve la probabilidad? (1 - 15)
+- ¿Qué es y para qué sirve la probabilidad? (1 - 14)

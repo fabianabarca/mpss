@@ -10,10 +10,10 @@ nav:
       - Análisis combinatorio: 1_0_2_combinatorio.md
     - La probabilidad:
       - ¿Qué es y para qué sirve la probabilidad?: 1_1_1_la_probabilidad.md
-      - Notas: 1_1_2_Notas.md  
+      - Notas: 1_1_2_notas.md  
     - Probabilidad conjunta y condicional: 1_2_1_conjunta_total.md
     - Teorema de Bayes: 1_2_2_bayes.md
-    - Eventos independientes: 1_3_1_eventos_Independientes.md
+    - Eventos independientes: 1_3_1_eventos_independientes.md
     - Pruebas repetidas de Bernoulli: 1_3_2_pruebas_bernoulli.md
 
   - (II) Variables aleatorias:
