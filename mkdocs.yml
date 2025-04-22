@@ -1,7 +1,36 @@
 site_name: Modelos Probabilísticos de Señales y Sistemas
 
+theme:
+  name: material
+  language: es
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 nav:
   - Inicio: index.md
+
+  - Ejemplo: ejemplo.md
 
   - (I) Introducción a la probabilidad:
     - Introducción: 1_0_introduccion.md
@@ -77,12 +106,13 @@ nav:
       - Autocorrelaciones y características espectrales de la respuesta del sistema: 4_16_2_autocorrelacion_caracteristicas.md
 
   - (V) Cadenas de Markov:
+    - Introducción: 5_0_introduccion.md
     - Proceso contador de Poisson:
       - Proceso aleatorio de Poisson y sus funciones de densidad: 5_17_1_proceso_funciones_poisson.md
-      - Momentos de la distribución de Poisson y probabildiad conjunta y condicional: 5_17_2_momento_densidad.md
-    - Cadenas de Markov en tiempo contínuo:
+      - Momentos de la distribución de Poisson y probabilidad conjunta y condicional: 5_17_2_momento_densidad.md
+    - Cadenas de Markov en tiempo continuo:
       - Ejemplo de cadenas de Markov y deducción: 5_18_1_definicion_markov.md
-      - Proceso de nacimiento y muerte en tiempo contínuo: 5_18_2_nacimiento_muerte.md
+      - Proceso de nacimiento y muerte en tiempo continuo: 5_18_2_nacimiento_muerte.md
       - Teoría de colas: 5_18_3_teoria_de_colas.md
     - Vector de probabilidad de estado estable: 
       - Vector de probabilidad de estado estable: 5_19_1_vector_estable.md
@@ -95,7 +125,3 @@ nav:
     - Cadenas de Markov en tiempo discreto y vector de estado estable:
       - El vector probabilidad en estado estable: 5_21_1_markov_estado_estable.md
       - Proceso cíclico: 5_21_2_markov_estado_estable.md
-
-theme:
-  name: material
-  language: es
