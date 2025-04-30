@@ -66,6 +66,3 @@ Y para desactivar:
 ```bash
 deactivate
 ```
-
-## Edición del contenido
-

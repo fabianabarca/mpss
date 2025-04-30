@@ -4,7 +4,7 @@ El objetivo de esta tarea es hacer una transcripción de los contenidos del curs
 
 Esto tiene los siguientes objetivos:
 
-- Utilizar la versatilidad del formato Markdown para incluir nuevas formas de contenido multimedia.
+- Explotar la versatilidad del formato Markdown para incluir nuevas formas de contenido multimedia.
 - Crear una versión de página web del contenido, visible fácilmente desde celulares u otros medios, con MkDocs (esta misma página es un ejemplo).
 - Crear presentaciones interactivas con Slidev. Las presentaciones PDF actuales son, por su naturaleza, estáticas.
 - Crear un documento en LaTeX con los contenidos del curso pero en formato de libro de texto, utilizando los mismos archivos Markdown (`.md`) como fuente.
@@ -24,9 +24,9 @@ Estas son algunas equivalencias:
 
 ## Elementos de la transcripción
 
-
-
 ### Textos
+
+Los textos, listas y otros similares siguen la [sintaxis básica de Markdown](https://www.markdownguide.org/basic-syntax/).
 
 ### Fórmulas
 
@@ -45,9 +45,11 @@ que genera:
 x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
+Hay variables, como $x_{1,2}$ o $b$, y ecuaciones en línea, como $a \neq 0$.
+
 #### Cambios necesarios
 
-Las presentaciones tienen algunas funciones especiales que es necesario adaptar aquí. La más común es:
+Las presentaciones tienen algunas funciones especiales que es necesario adaptar aquí.
 
 ### Notas especiales ("cajas de colores")
 
@@ -113,6 +115,10 @@ y resulta en:
 
 !!! note
     La más famosa de las funciones de probabilidad es la *normal* (o *gaussiana*), que describe la noción de que las probabilidades de ocurrencia de un evento están concentradas de forma simétrica alrededor de un valor central.
+
+### Uso de inteligencia artificial generativa
+
+¡Por supuesto! ChatGPT, Gemini, DeepSeek, Claude o cualquier otro pueden ayudar a transformar el código de LaTeX en Markdown, solo hay que pedirlo. Pero ¡cuidado!, hay que revisar bien la sintaxis y los casos especiales y verificar su presentación en la documentación, para que sea fiel (totalmente fiel) a la presentación, especialmente con precisión de la matemática, etc.
 
 ### Gráficos
 
