@@ -132,5 +132,5 @@ nav:
       - La matriz de transición de orden t: 5_20_2_markov_discreto.md
       - Ecuaciones de Chapman - Kolgomorov y Vector de probabilidad pt: 5_20_3_markov_discreto.md
     - Cadenas de Markov en tiempo discreto y vector de estado estable:
-      - El vector probabilidad en estado estable: 5_21_1_markov_estado_estable.md
+      - El vector de probabilidad en estado estable: 5_21_1_markov_estado_estable.md
       - Proceso cíclico: 5_21_2_markov_estado_estable.md
