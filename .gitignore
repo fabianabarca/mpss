@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# Node modules
+node_modules/
+
+# VitePress
+.vitepress/cache/
+.vitepress/deps/
+.vitepress/dist/
+
+
 # Distribution / packaging
 .Python
 env/
