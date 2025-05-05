@@ -66,3 +66,9 @@ Y para desactivar:
 ```bash
 deactivate
 ```
+
+## Envío del trabajo
+
+El envío del trabajo se hace por medio de un *pull request* o [**solicitud de incorporación de cambios**](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) en GitHub.
+
+Típicamente este *pull request* solamente incluirá cambios en el documento asignado. Si hay otros cambios en otras partes, favor hacer una explicación y justificación dentro de la misma solicitud.

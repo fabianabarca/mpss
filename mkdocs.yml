@@ -5,6 +5,7 @@ theme:
   language: es
   features:
     - navigation.footer
+    - content.footnote.tooltips
   palette:
     primary: white
 
@@ -27,7 +28,9 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - attr_list
+  - md_in_html
   - def_list
+  - footnotes
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -39,7 +42,7 @@ extra_javascript:
 nav:
   - Inicio: index.md
 
-  - Ejemplo: ejemplo.md
+  - Sobre la transcripción: transcripcion.md
 
   - Introducción a la probabilidad:
     - Introducción: 1_0_introduccion.md
