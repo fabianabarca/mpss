@@ -1,6 +1,7 @@
 # El sistema de colas M/M/s
 
 !!! note ""
+
     Un sistema M/M/s tiene un proceso de llegada y de servicio tipo Markov (de ahí la M) y un número $s$ de servidores.
 
 En un sistema M/M/s, las llegadas son descritas por un proceso de Poisson con parámetro $\lambda$. Cada uno de los $s$ servidores tiene un tiempo de servicio exponencial con parámetro $\nu$.  
@@ -89,6 +90,7 @@ L_q = \frac{\lambda^2}{\nu(\nu - \lambda)} = \frac{\rho^2}{1 - \rho}
 ### Ejemplos de un servidor web
 
 !!! example ""
+
     Un servidor web es modelado como un sistema M/M/1 con una tasa de arribo de 2 solicitudes por minuto.  
     Se desea tener 3 solicitudes o menos en fila (más una que está siendo atendida) el 99% del tiempo.  
     ¿Qué tan rápido debe ser el servicio? $\nu$ es solicitudes atendidas por minuto.
@@ -117,6 +119,7 @@ P(5 \text{ o más clientes en el sistema}) = \left( \frac{\lambda}{\nu} \right)^
 Suponga las siguientes condiciones para el proceso de nacimiento y muerte:
 
 !!! note ""
+
     1️⃣ $p_0 = 1$  
     2️⃣ $0 < p_i < 1$ para $i = 1, 2, \dots$  
     3️⃣ $q_N = 1$ si $S = \{0, 1, 2, \dots, N\}$  
