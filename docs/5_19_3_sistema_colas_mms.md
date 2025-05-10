@@ -98,7 +98,7 @@ L_q = \frac{\lambda^2}{\nu(\nu - \lambda)} = \frac{\rho^2}{1 - \rho}
 El estado $i$ es el número de clientes en el sistema. La longitud de la fila es $L_q = i - 1$ (en virtud de la solicitud que está siendo atendida en $s = 1$ servidores). Es posible encontrar:
 
 \begin{equation}
-P(\text{5 o más clientes en el sistema}) = \rho^5 = \sum_{i=5}^{\infty} (1 - \rho) \rho^i = 1 - \sum_{i=0}^{4} (1 - \rho) \rho^i = \rho^5
+P(\text{5 o más clientes en el sistema}) = \sum_{i=5}^{\infty} (1 - \rho) \rho^i = 1 - \sum_{i=0}^{4} (1 - \rho) \rho^i = \rho^5
 \end{equation}
 
 que depende de $\rho = \frac{\lambda}{\nu}$ y del parámetro de servicio $\nu$ buscado.
@@ -106,7 +106,7 @@ que depende de $\rho = \frac{\lambda}{\nu}$ y del parámetro de servicio $\nu$ b
 De los datos del problema: $\lambda = 2$. Para tener una fila de 3 o menos clientes el 99% del tiempo se necesita:
 
 \begin{equation}
-P(5 \text{ o más clientes en el sistema}) = \left( \frac{\lambda}{\nu} \right)^5 \leq 0.01
+P(5 \text{ o más clientes en el sistema}) = \rho^5 = \left( \frac{\lambda}{\nu} \right)^5 \leq 0.01
 \end{equation}
 
 \begin{equation}
@@ -118,12 +118,10 @@ P(5 \text{ o más clientes en el sistema}) = \left( \frac{\lambda}{\nu} \right)^
 
 Suponga las siguientes condiciones para el proceso de nacimiento y muerte:
 
-!!! note ""
-
-    1️⃣ $p_0 = 1$  
-    2️⃣ $0 < p_i < 1$ para $i = 1, 2, \dots$  
-    3️⃣ $q_N = 1$ si $S = \{0, 1, 2, \dots, N\}$  
-    4️⃣ $\Omega_i > 0$ para $i \in S$
+1️⃣ $p_0 = 1$  
+2️⃣ $0 < p_i < 1$ para $i = 1, 2, \dots$  
+3️⃣ $q_N = 1$ si $S = \{0, 1, 2, \dots, N\}$  
+4️⃣ $\Omega_i > 0$ para $i \in S$
 
 Suponga que $\phi$ es un vector de probabilidad que satisface:
 
@@ -151,21 +149,20 @@ P(X_t = i \mid \text{vector inicial } \phi) = \phi_i
 
 para todo $t \geq 0$ para $i \in S$.
 
-*Primer resultado*
+**Primer resultado**
 Sin importar el estado inicial en el tiempo $t = 0$, el proceso se hallará en el estado $i$ con probabilidad $\phi_i$ conforme $t$ se hace grande.
 
-*Segundo resultado*
+**Segundo resultado**
 Si $\phi$ se usa como el vector inicial de probabilidad, entonces $\phi$ será el vector de probabilidad para todo tiempo $t \geq 0$.
 
 Las condiciones del teorema sobre $\Omega_i, p_i, q_i$ son esenciales: ningún estado es absorbente y cualquier estado puede alcanzarse desde cualquier otro estado.
 
 ### Videos y referencias en internet
 
-- *¿Qué es una cadena de Markov?*  
-  Luis Rincón  
-  [https://youtu.be/Trf9P7DnOHQ](https://youtu.be/Trf9P7DnOHQ)
+- **¿Qué es una cadena de Markov?**
 
-- *Origin of Markov chains | Journey into information theory | Computer Science*  
-  Khan Academy Labs  
-  [https://youtu.be/Ws63I3F7Moc](https://youtu.be/Ws63I3F7Moc)
+  Luis Rincón  [https://youtu.be/Trf9P7DnOHQ](https://youtu.be/Trf9P7DnOHQ)
 
+- **Origin of Markov chains | Journey into information theory | Computer Science**
+
+  Khan Academy Labs  [https://youtu.be/Ws63I3F7Moc](https://youtu.be/Ws63I3F7Moc)
