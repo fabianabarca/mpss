@@ -98,7 +98,7 @@ L_q = \frac{\lambda^2}{\nu(\nu - \lambda)} = \frac{\rho^2}{1 - \rho}
 El estado $i$ es el número de clientes en el sistema. La longitud de la fila es $L_q = i - 1$ (en virtud de la solicitud que está siendo atendida en $s = 1$ servidores). Es posible encontrar:
 
 \begin{equation}
-P(\text{5 o más clientes en el sistema}) = \sum_{i=5}^{\infty} (1 - \rho) \rho^i = 1 - \sum_{i=0}^{4} (1 - \rho) \rho^i = \rho^5
+P(\text{5 o más clientes en el sistema}) = \rho^5 = \sum_{i=5}^{\infty} (1 - \rho) \rho^i = 1 - \sum_{i=0}^{4} (1 - \rho) \rho^i = \rho^5
 \end{equation}
 
 que depende de $\rho = \frac{\lambda}{\nu}$ y del parámetro de servicio $\nu$ buscado.
