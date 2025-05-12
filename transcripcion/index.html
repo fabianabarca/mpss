@@ -1,0 +1,3588 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../1_0_introduccion/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>Sobre la transcripción - Modelos Probabilísticos de Señales y Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#latex-vs-markdown" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Modelos Probabilísticos de Señales y Sistemas" class="md-header__button md-logo" aria-label="Modelos Probabilísticos de Señales y Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Modelos Probabilísticos de Señales y Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sobre la transcripción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Modelos Probabilísticos de Señales y Sistemas" class="md-nav__button md-logo" aria-label="Modelos Probabilísticos de Señales y Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Modelos Probabilísticos de Señales y Sistemas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sobre la transcripción
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sobre la transcripción
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latex-vs-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      LaTeX vs. Markdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-la-transcripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos de la transcripción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos de la transcripción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Textos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fórmulas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas especiales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-de-una-presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción de una presentación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definiciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-con-enfasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados con énfasis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-o-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos o ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-inteligencia-artificial-generativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de inteligencia artificial generativa
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introducción a la probabilidad
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la probabilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Definiciones preliminares
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Definiciones preliminares
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_0_1_conjuntos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teoría de conjuntos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_0_2_combinatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Análisis combinatorio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    La probabilidad
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            La probabilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_1_1_la_probabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Qué es y para qué sirve la probabilidad?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_1_2_notas.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_2_1_conjunta_total/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probabilidad conjunta y condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_2_2_bayes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teorema de Bayes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_3_1_eventos_independientes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eventos independientes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_3_2_pruebas_bernoulli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruebas repetidas de Bernoulli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables aleatorias
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Variables aleatorias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_4_1_variables_aleatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definiciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_4_2_funciones_distribucion_acumulativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de probabilidad acumulativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_4_3_funciones_probabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de densidad de probabilidad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_4_4_funciones_aplicacion_comun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algunas distribuciones comunes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funciones de distribución condicionales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Funciones de distribución condicionales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_5_1_funcion_acumulativa_condicional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función acumulativa condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_5_2_casos_especiales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casos especiales de la función acumulativa y sus ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_5_3_funcion_densidad_condicional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de densidad condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Momentos de una variable aleatoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Momentos de una variable aleatoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_6_1_valor_esperado_va/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Valor esperado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_6_2_momentos_va/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Momentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funciones que dan momentos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Funciones que dan momentos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_7_1_generadora_caracteristica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función generadora de momentos y función característica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_7_2_ejemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos para diferentes funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_7_3_ejemplos_de_determinacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de determinación de la función característica I-VII
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_7_4_ejemplos_de_determinacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de determinación de la función característica VIII-XII
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de una variable aleatoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Transformaciones de una variable aleatoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_8_1_disipacion_potencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos de disipación de potencia y de una variable aleatoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_8_2_transformaciones_va/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de una variable aleatoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_8_3_no_monotonicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones no monotónicas y sus ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables aleatorias conjuntas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Variables aleatorias conjuntas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables aleatorias múltiples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables aleatorias múltiples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_9_1_variable_aleatoria_multiple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de probabilidad acumulativa conjunta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_9_2_propiedades_acumulativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de densidad probabilística conjunta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_9_3_propiedades_densidad_conjunta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propiedades de la función de densidad conjunta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_9_4_independencia_estadistica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Independencia estadística
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Momentos de las variables aleatorias múltiples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Momentos de las variables aleatorias múltiples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_10_1_valor_esperado_momentos_correlacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Valor esperado, momentos conjuntos alrededor del origen y correlación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_10_2_independencia_ortogonalidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Independencia, ortogonalidad y momentos centrales conjuntos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de variables aleatorias múltiples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Transformaciones de variables aleatorias múltiples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_11_1_transformacion_va_multiples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de variables aleatorias múltiples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_11_2_vida_util_y_distribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vida útil de un componente y distribución probabilística
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Teorema del límite central, desigualdades de Chebyshev y Markov y ley de los grandes números
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Teorema del límite central, desigualdades de Chebyshev y Markov y ley de los grandes números
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_12_1_limite_central_sumas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teorema del límite central para sumas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_12_2_limite_central_muestras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teorema del límite central para muestras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_12_3_desigualdad_chebyshev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desigualdad de Chebyshev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_12_4_desigualdad_markov/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desigualdad de Markov y ley de los números grandes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Procesos aleatorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Procesos aleatorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Procesos aleatorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Procesos aleatorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_13_1_concepto_estocastico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definiciones y concepto de un proceso estocástico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_13_2_clasificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clasificación de procesos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_13_3_funciones_distribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones de distribución e independencia estadística
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_13_4_estacionaridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estacionaridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ergodicidad y funciones de correlación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ergodicidad y funciones de correlación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_14_1_ergodicidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Promedios en el tiempo y ergodicidad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_14_2_correlacion_covarianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones de correlación y covarianza
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_14_3_funciones_covarianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones de covarianza
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Características espectrales de los procesos aleatorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Características espectrales de los procesos aleatorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_15_1_espectro_densidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Espectro de densidad de potencia y sus propiedades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_15_2_propiedades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propiedades de la densidad espectral y definiciones de ruido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Respuesta de sistemas lineales a una señal aleatoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Respuesta de sistemas lineales a una señal aleatoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_16_1_respuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Respuesta del sistema y valor cuadrático medio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_16_2_autocorrelacion_caracteristicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autocorrelaciones y características espectrales de la respuesta del sistema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Proceso contador de Poisson
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Proceso contador de Poisson
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_17_1_proceso_funciones_poisson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso aleatorio de Poisson y sus funciones de densidad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_17_2_momento_densidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Momentos de la distribución de Poisson y probabilidad conjunta y condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo continuo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov en tiempo continuo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_18_1_definicion_markov/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de cadenas de Markov y deducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_18_2_nacimiento_muerte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso de nacimiento y muerte en tiempo continuo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_18_3_teoria_de_colas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teoría de colas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vector de probabilidad de estado estable
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Vector de probabilidad de estado estable
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_19_1_vector_estable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector de probabilidad de estado estable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_19_2_cola_servidores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cola de un solo servidor y de un número infinito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_19_3_sistema_colas_mms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sistema de colas M/M/s
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo discreto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov en tiempo discreto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_20_1_markov_discreto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo discreto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_20_2_markov_discreto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    La matriz de transición de orden t
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_20_3_markov_discreto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecuaciones de Chapman - Kolgomorov y Vector de probabilidad pt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo discreto y vector de estado estable
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov en tiempo discreto y vector de estado estable
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_21_1_markov_estado_estable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    El vector de probabilidad en estado estable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_21_2_markov_estado_estable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso cíclico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latex-vs-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      LaTeX vs. Markdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-la-transcripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos de la transcripción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos de la transcripción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Textos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fórmulas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas especiales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-de-una-presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción de una presentación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definiciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-con-enfasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados con énfasis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-o-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos o ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-inteligencia-artificial-generativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de inteligencia artificial generativa
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Sobre la transcripción</h1>
+
+<p>El objetivo de esta tarea es hacer una transcripción de los contenidos del curso Modelos Probabilísticos de Señales y Sistemas de las presentaciones hechas en LaTeX (Overleaf) para documentos en formato Markdown.</p>
+<p>Esto tiene los siguientes objetivos:</p>
+<ul>
+<li>Explotar la versatilidad del formato <a href="https://www.markdownguide.org/">Markdown</a> para incluir nuevas formas de contenido multimedia.</li>
+<li>Crear una versión de página web del contenido, visible fácilmente desde celulares u otros medios, con MkDocs (esta misma página es un ejemplo).</li>
+<li>Crear presentaciones interactivas con <a href="https://sli.dev/">Slidev</a>. Las presentaciones PDF actuales son, por su naturaleza, estáticas.</li>
+<li>Crear un documento en LaTeX con los contenidos del curso pero en formato de libro de texto, utilizando los mismos archivos Markdown (<code>.md</code>) como fuente.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Transcripción de referencia</p>
+<p>El documento <a href="../5_21_1_markov_estado_estable/"><code>5_21_1_markov_estado_estable.md</code></a> tiene la transcripción de la presentación 21 "El vector de probabilidad en estado estable".</p>
+<blockquote>
+<p>Por favor ver esa página.</p>
+</blockquote>
+</div>
+<h3 id="latex-vs-markdown">LaTeX vs. Markdown</h3>
+<p>Tanto LaTeX como Markdown son lenguajes de descripción de formato. Markdown, de hecho, es una versión de sintaxis simplificada de HTML.</p>
+<p>Estas son algunas equivalencias:</p>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>LaTeX</th>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Cursiva</em></td>
+<td><code>\textit{hola}</code></td>
+<td><code>*hola*</code></td>
+<td><code>&lt;emph&gt;hola&lt;/emph&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Negrita</strong></td>
+<td><code>\textbf{hola}</code></td>
+<td><code>**hola**</code></td>
+<td><code>&lt;strong&gt;hola&lt;/strong&gt;</code></td>
+</tr>
+<tr>
+<td>Sección</td>
+<td><code>\section{Hola}</code></td>
+<td><code># Hola</code></td>
+<td><code>&lt;h1&gt;Hola&lt;/h1&gt;</code></td>
+</tr>
+<tr>
+<td>Subsección</td>
+<td><code>\subsection{Hola}</code></td>
+<td><code>## Hola</code></td>
+<td><code>&lt;h2&gt;Hola&lt;/h2&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="elementos-de-la-transcripcion">Elementos de la transcripción</h2>
+<p>La mayoría de las presentaciones tiene algunos o todos de los siguientes elementos.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17H7v-2h7m3-2H7v-2h10m0-2H7V7h10m2-4H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> <strong>Textos</strong></p>
+<hr />
+<p>Textos con formato como <strong>negrita</strong>, <em>cursiva</em>, títulos, listas y otros.</p>
+<p><a href="#textos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m7 14 5-5h-3V8h-4v4H7z"/></svg></span> Ver detalles</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg></span> <strong>Fórmulas</strong></p>
+<hr />
+<p>Variables y ecuaciones en línea y ecuaciones en bloque.</p>
+<p><a href="#formulas"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m7 14 5-5h-3V8h-4v4H7z"/></svg></span> Ver detalles</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2z"/></svg></span> <strong>Gráficos</strong></p>
+<hr />
+<p>Gráficos generados con PGF/Ti<em>k</em>Z y exportados como SVG.</p>
+<p><a href="#graficos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m7 14 5-5h-3V8h-4v4H7z"/></svg></span> Ver detalles</a></p>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59H5c-.53 0-1.04-.21-1.41-.59C3.21 20.04 3 19.53 3 19V5c0-1.11.89-2 2-2m8 6V7h-2v2zm0 8v-6h-2v6z"/></svg></span> <strong>Notas especiales</strong></p>
+<hr />
+<p>Secciones con formato especial para dar énfasis a afirmaciones o resultados.</p>
+<p><a href="#notas-especiales"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m7 14 5-5h-3V8h-4v4H7z"/></svg></span> Ver detalles</a></p>
+</li>
+</ul>
+</div>
+<h3 id="textos">Textos</h3>
+<p>Los textos, listas y otros similares siguen la <a href="https://www.markdownguide.org/basic-syntax/">sintaxis básica de Markdown</a>.</p>
+<p><strong>Observaciones</strong></p>
+<ul>
+<li>No todos los títulos de diapositivas (<code>frame</code>) deben incluirse, solamente los que sean significativos y no redundantes.</li>
+<li>Respetar el uso de énfasis con negritas y/o cursivas.</li>
+<li>Cuando hay énfasis con cajas de colores, ver sección <a href="#notas-especiales">notas especiales</a>.</li>
+<li>Es posible utilizar las <a href="https://squidfunk.github.io/mkdocs-material/reference/">herramientas de Material for MkDocs</a>, pero por el momento es mejor mantener el texto con formato básico.</li>
+<li>Deben ignorar (y eliminar) las siguientes instrucciones de LaTeX:<ul>
+<li><code>\begin{frame} ... \end{frame}</code> (excepto los títulos, cuando corresponde)</li>
+<li><code>\framebreak</code></li>
+<li><code>\noindent</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="formulas">Fórmulas</h3>
+<p>Todas las fórmulas son escritas con notación de LaTeX. Esta documentación utiliza <a href="https://www.mathjax.org/">MathJax</a> para renderizar las fórmulas en el navegador. La notación es idéntica:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">LaTeX</label><label for="__tabbed_1_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>x<span class="nb">_{</span>1,2<span class="nb">}</span> = <span class="k">\frac</span><span class="nb">{</span>-b <span class="k">\pm</span> <span class="k">\sqrt</span><span class="nb">{</span>b<span class="nb">^</span>2 - 4ac<span class="nb">}}{</span>2a<span class="nb">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>x<span class="nb">_{</span>1,2<span class="nb">}</span> = <span class="k">\frac</span><span class="nb">{</span>-b <span class="k">\pm</span> <span class="k">\sqrt</span><span class="nb">{</span>b<span class="nb">^</span>2 - 4ac<span class="nb">}}{</span>2a<span class="nb">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>que genera:</p>
+<div class="arithmatex">\[\begin{equation}
+x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}\]</div>
+<p>Hay variables y expresiones como <span class="arithmatex">\(x_{1,2}\)</span> o <span class="arithmatex">\(b^2\)</span>, y ecuaciones en línea, como <span class="arithmatex">\(a \neq 0\)</span>, y es muy importante usar la notación matemática dentro del texto. Por ejemplo, la variable aleatoria es <span class="arithmatex">\(X\)</span> y no X.</p>
+<p><strong>Observaciones</strong></p>
+<ul>
+<li>Eliminar el <code>*</code> en <code>\begin{equation*}</code>, que indica ecuación no numerada (porque no aplica aquí).</li>
+<li>Si existiese el delimitador <code>\[ ... \]</code> para ecuaciones en bloque, sustituirlo por <code>\begin{equation} ... \end{equation}</code>. </li>
+<li>En las integrales, sustituir el comando especial <code>\di{x}</code> por <code>~\mathrm{d} x</code>, que describe el operador <span class="arithmatex">\(\mathrm{d} x\)</span> en una integral, como en <span class="arithmatex">\(\int_{-\infty}^{\infty} f_{X}(x) ~\mathrm{d}x = 1\)</span>.</li>
+<li>Al finalizar la transcripción, revisar por favor minuciosamente la correspondencia de las ecuaciones.</li>
+</ul>
+<h3 id="graficos">Gráficos</h3>
+<p>La gran mayoría de los gráficos en las presentaciones son hechos con <a href="https://tikz.dev/">PGF/Ti<em>k</em>Z</a>, un poderoso paquete de diseño de imágenes.</p>
+<p>El directorio <code>images/</code> tiene la versión SVG de <em>todas las imágenes</em> de todas las presentaciones y deben usarlas en su lugar respectivo. El formato es:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>![<span class="nt">Descripción de la imagen</span>](<span class="na">images/prueba.svg</span>)
+</span></code></pre></div>
+<p>que muestra:</p>
+<p><img alt="Descripción de la imagen" src="../images/prueba.svg" /></p>
+<p><strong>Observaciones</strong></p>
+<ul>
+<li>Las referencias dentro del texto a una figura con <code>\ref{label}</code> (si las hubiese) deben ser sustituidas por una descripción literal, como "la figura anterior" o "la figura siguiente", por ejemplo.</li>
+<li>Es necesaria una descripción adecuada de la imagen dentro de los paréntesis cuadrados. Por ejemplo: <code>![Función de densidad de probabilidad de la distribución normal](densidad_normal.svg)</code>. Esta descripción es utilizada para accesibilidad de personas con discapacidad visual y para buscadores web.</li>
+</ul>
+<h3 id="notas-especiales">Notas especiales</h3>
+<p>En las presentaciones hay varias "cajas de colores" para resaltar ciertas informaciones y definiciones. Es posible transcribirlas en <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">admoniciones</a> de Markdown, cuyo formato es:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>!!! note &quot;Nota&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    Hola, soy una nota
+</span></code></pre></div>
+<p>que se convierte en:</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Hola, soy una nota</p>
+</div>
+<p>En particular, serán transcritos como notas:</p>
+<ul>
+<li>Introducción de una presentación</li>
+<li>Definiciones</li>
+<li>Resultados con énfasis</li>
+<li>Ejemplos o ejercicios</li>
+</ul>
+<h4 id="introduccion-de-una-presentacion">Introducción de una presentación</h4>
+<p>Al inicio de cada presentación hay una breve reseña del tema. Esta misma reseña estará al inicio de la página transcrita en Markdown, como una <em>admonición</em>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">LaTeX</label><label for="__tabbed_2_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}</span>[plain,noframenumbering]
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">\LARGE</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Cuando existe una cantidad definida de estados, es posible modelar las transiciones entre todos estos estados.
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Luego de suficientes transiciones, y al alcanzar un ``régimen permanente&#39;&#39;, cada estado tiene una probabilidad definida.
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">\end</span><span class="nb">{</span>frame<span class="nb">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>!!! abstract
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    Cuando existe una cantidad definida de estados, es posible modelar las transiciones entre todos estos estados.
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    Luego de suficientes transiciones, y al alcanzar un &quot;régimen permanente&quot;, cada estado tiene una probabilidad definida.
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>y resulta en:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Introducción</p>
+<p>Cuando existe una cantidad definida de estados, es posible modelar las transiciones entre todos estos estados.</p>
+<p>Luego de suficientes transiciones, y al alcanzar un "régimen permanente", cada estado tiene una probabilidad definida.</p>
+</div>
+<h4 id="definiciones">Definiciones</h4>
+<p>Las presentaciones tiene definiciones que están dentro de un entorno llamado <code>bloque</code>, que será transcrito en una <em>admonición</em> tipo <code>tip</code>. Notar que hay un título de descripción.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">LaTeX</label><label for="__tabbed_3_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">\begin</span><span class="nb">{</span>bloque<span class="nb">}{</span>Definición de una variable aleatoria<span class="nb">}</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Para un espacio de eventos <span class="s">$</span><span class="nb">S</span><span class="s">$</span>, una <span class="k">\textbf</span><span class="nb">{</span>variable aleatoria<span class="nb">}</span> es cualquier regla que asocia cada resultado elemental de <span class="s">$</span><span class="nb">S</span><span class="s">$</span> con <span class="k">\textbf</span><span class="nb">{</span>un número<span class="nb">}</span>. Es decir, es una <span class="k">\textbf</span><span class="nb">{</span>función<span class="nb">}</span> cuyo dominio es el espacio (quizá abstracto) de eventos o muestras, y cuyo rango es algún subconjunto de los números reales.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">\end</span><span class="nb">{</span>bloque<span class="nb">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>!!! tip &quot;Definición de una variable aleatoria&quot;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    Para un espacio de eventos $S$, una <span class="gs">**variable aleatoria**</span> es cualquier regla que asocia cada resultado elemental de $S$ con <span class="gs">**un número**</span>. Es decir, es una <span class="gs">**función**</span> cuyo dominio es el espacio (quizá abstracto) de eventos o muestras, y cuyo rango es algún subconjunto de los números reales.
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>y resulta en:</p>
+<div class="admonition tip">
+<p class="admonition-title">Definición de una variable aleatoria</p>
+<p>Para un espacio de eventos <span class="arithmatex">\(S\)</span>, una <strong>variable aleatoria</strong> es cualquier regla que asocia cada resultado elemental de <span class="arithmatex">\(S\)</span> con <strong>un número</strong>. Es decir, es una <strong>función</strong> cuyo dominio es el espacio (quizá abstracto) de eventos o muestras, y cuyo rango es algún subconjunto de los números reales.</p>
+</div>
+<h4 id="resultados-con-enfasis">Resultados con énfasis</h4>
+<p>Algunos resultados o frases tienen un énfasis (caja verde, sin título) con un entorno llamado <code>énfasis</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">LaTeX</label><label for="__tabbed_4_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">\begin</span><span class="nb">{</span>enfasis<span class="nb">}</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>La más famosa de las funciones de probabilidad es la <span class="k">\textit</span><span class="nb">{</span>normal<span class="nb">}</span> (o <span class="k">\emph</span><span class="nb">{</span>gaussiana<span class="nb">}</span>), que describe la noción de que las probabilidades de ocurrencia de un evento están concentradas de forma simétrica alrededor de un valor central.
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">\end</span><span class="nb">{</span>enfasis<span class="nb">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>!!! note &quot;&quot;
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    La más famosa de las funciones de probabilidad es la <span class="ge">*normal*</span> (o <span class="ge">*gaussiana*</span>), que describe la noción de que las probabilidades de ocurrencia de un evento están concentradas de forma simétrica alrededor de un valor central.
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>y resulta en:</p>
+<div class="admonition note">
+<p>La más famosa de las funciones de probabilidad es la <em>normal</em> (o <em>gaussiana</em>), que describe la noción de que las probabilidades de ocurrencia de un evento están concentradas de forma simétrica alrededor de un valor central.</p>
+</div>
+<p>El <em>string</em> <code>""</code> le quita el título.</p>
+<h4 id="ejemplos-o-ejercicios">Ejemplos o ejercicios</h4>
+<p>Los ejemplos (mostrados dentro de <code>\begin{framex} ... \end{framex}</code>) son casos especiales del texto que tendrán el siguiente formato:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">LaTeX</label><label for="__tabbed_5_2">Markdown</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">\begin</span><span class="nb">{</span>framex<span class="nb">}{</span>Ejemplo de la divisibilidad por un número primo<span class="nb">}{</span>Definición clásica de Laplace<span class="nb">}</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">\begin</span><span class="nb">{</span>planteamiento<span class="nb">}</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Determine la probabilidad de que un número natural cualquiera es divisible por un número primo <span class="s">$</span><span class="nb">n</span><span class="s">$</span>.
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">\end</span><span class="nb">{</span>planteamiento<span class="nb">}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">\item</span> Si <span class="s">$</span><span class="nb">n</span><span class="s">$</span> es un número primo, entonces cada <span class="s">$</span><span class="nb">n</span><span class="s">$</span>-ésimo número (empezando por <span class="s">$</span><span class="nb">n</span><span class="s">$</span>) es divisible por <span class="s">$</span><span class="nb">n</span><span class="s">$</span>.
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">\item</span> Por lo tanto, en <span class="s">$</span><span class="nb">n</span><span class="s">$</span> enteros consecutivos hay un resultado favorable, y por tanto:
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="sb">\[</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="nb">P</span><span class="o">(</span><span class="nv">\text</span><span class="nb">{un número es divisible por un primo $n$}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{n}</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="s">\]</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="k">\centering</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    ...
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="k">\end</span><span class="nb">{</span>framex<span class="nb">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>    ---
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    :material-pencil-box: <span class="gs">**EJEMPLO**</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    !!! example &quot;Título representativo del problema&quot;
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        Texto del enunciado dentro de la <span class="ge">*admonición*</span> tipo <span class="sb">`example`</span>, que incluye los datos del problema y la pregunta por resolver. 
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    Aquí están 
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>todos
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>los pasos
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>necesarios
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>para la solución
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    y finalmente:
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>    !!! note &quot;&quot;
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>        Respuesta al problema con énfasis dentro de la <span class="ge">*admonición*</span>.
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    ---
+</span></code></pre></div>
+<hr />
+</div>
+</div>
+</div>
+<p>y resulta en:</p>
+<hr />
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-2.3 6.35c.22-.21.22-.56 0-.77L15.42 7.3a.53.53 0 0 0-.77 0l-1 1 2.05 2.05zM7 14.94V17h2.06l6.06-6.06-2.06-2.06z"/></svg></span> <strong>EJEMPLO</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Título representativo del problema</p>
+<p>Texto del enunciado dentro de la <em>admonición</em> tipo <code>example</code>, que incluye los datos del problema y la pregunta por resolver. </p>
+<p>¿Cuál es la expresión para la probabilidad del evento <span class="arithmatex">\(A \cap B\)</span> en la gráfica mostrada?</p>
+<p><img alt="Árbol de decisiones" src="../images/2_arbol_probabilidades.svg" /></p>
+</div>
+<p>Aquí están los pasos de la solución del problema. Incluyendo gráficas:</p>
+<p><img alt="Ocurrencia simultánea" src="../images/2_ocurrencia_simultanea_venn.svg" /></p>
+<p>y también ecuaciones:</p>
+<div class="arithmatex">\[\begin{equation}
+P(A \cap B) = P(A) P(B \mid A)
+\end{equation}\]</div>
+<ul>
+<li>y todos</li>
+<li>los pasos</li>
+<li>necesarios</li>
+<li>para la solución</li>
+</ul>
+<p>y finalmente:</p>
+<div class="admonition note">
+<p>Respuesta al problema con énfasis dentro de la <em>admonición</em> tipo <code>note</code> pero sin título (con <code>""</code>) y mostrando las ecuaciones relevantes:</p>
+<div class="arithmatex">\[
+P(A \cap B) = P(A) P(B \mid A)
+\]</div>
+</div>
+<hr />
+<p><strong>Observaciones</strong></p>
+<ul>
+<li>Los ejemplos deben tener un título representativo</li>
+<li>Actualmente el enunciado está dentro del entorno <code>planteamiento</code>.</li>
+<li>Notar la línea horizontal <code>---</code> antes y después del ejemplo</li>
+<li>Las ecuaciones en bloque dentro de las <em>admoniciones</em> deben estar rodeadas por <code>$$</code>.</li>
+<li>Respetar la estructura:</li>
+</ul>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>---
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>:material-pencil-box: <span class="gs">**EJEMPLO**</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>!!! example &quot;Título del problema&quot;
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    Texto del enunciado. 
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Pasos de la solución.
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>!!! note &quot;&quot;
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    Respuesta al problema.
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>---
+</span></code></pre></div>
+<p>Nota: puede copiar y llevar el fragmento anterior cada vez que va a incluir un ejemplo.</p>
+<h2 id="uso-de-inteligencia-artificial-generativa">Uso de inteligencia artificial generativa</h2>
+<blockquote>
+<p>¿Podemos usar IA?</p>
+</blockquote>
+<p>¡Por supuesto!<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (y recomendado). ChatGPT, Gemini, DeepSeek, Claude o cualquier otro pueden ayudar a transformar el código de LaTeX en Markdown, solo hay que pedirlo. Pero ¡cuidado!, hay que revisar bien la sintaxis y los casos especiales y verificar su presentación en la documentación, para que sea fiel (totalmente fiel) a la presentación, especialmente con precisión de la matemática, etc.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>No podría evitarlo, de todos modos <img alt="🤷‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f937-200d-2642-fe0f.svg" title=":man_shrugging:" />&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inicio">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Inicio
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../1_0_introduccion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Introducción">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.footnote.tooltips"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

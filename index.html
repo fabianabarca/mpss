@@ -1,0 +1,3489 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="transcripcion/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>Modelos Probabilísticos de Señales y Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelos-probabilisticos-de-senales-y-sistemas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="Modelos Probabilísticos de Señales y Sistemas" class="md-header__button md-logo" aria-label="Modelos Probabilísticos de Señales y Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Modelos Probabilísticos de Señales y Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inicio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Modelos Probabilísticos de Señales y Sistemas" class="md-nav__button md-logo" aria-label="Modelos Probabilísticos de Señales y Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Modelos Probabilísticos de Señales y Sistemas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#asignaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asignaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asignaciones-de-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignaciones de documentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentaciones-en-overleaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentaciones en Overleaf
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transcripcion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sobre la transcripción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introducción a la probabilidad
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la probabilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Definiciones preliminares
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Definiciones preliminares
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_0_1_conjuntos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teoría de conjuntos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_0_2_combinatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Análisis combinatorio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    La probabilidad
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            La probabilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_1_1_la_probabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ¿Qué es y para qué sirve la probabilidad?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_1_2_notas.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_2_1_conjunta_total/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probabilidad conjunta y condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_2_2_bayes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teorema de Bayes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_3_1_eventos_independientes.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Eventos independientes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_3_2_pruebas_bernoulli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pruebas repetidas de Bernoulli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables aleatorias
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Variables aleatorias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_4_1_variables_aleatorias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definiciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_4_2_funciones_distribucion_acumulativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de probabilidad acumulativa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_4_3_funciones_probabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de densidad de probabilidad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_4_4_funciones_aplicacion_comun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algunas distribuciones comunes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funciones de distribución condicionales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Funciones de distribución condicionales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_5_1_funcion_acumulativa_condicional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función acumulativa condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_5_2_casos_especiales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casos especiales de la función acumulativa y sus ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_5_3_funcion_densidad_condicional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de densidad condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Momentos de una variable aleatoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Momentos de una variable aleatoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_6_1_valor_esperado_va/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Valor esperado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_6_2_momentos_va/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Momentos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Funciones que dan momentos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Funciones que dan momentos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_7_1_generadora_caracteristica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función generadora de momentos y función característica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_7_2_ejemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos para diferentes funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_7_3_ejemplos_de_determinacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de determinación de la función característica I-VII
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_7_4_ejemplos_de_determinacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de determinación de la función característica VIII-XII
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de una variable aleatoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Transformaciones de una variable aleatoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_8_1_disipacion_potencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos de disipación de potencia y de una variable aleatoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_8_2_transformaciones_va/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de una variable aleatoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_8_3_no_monotonicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones no monotónicas y sus ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables aleatorias conjuntas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Variables aleatorias conjuntas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Variables aleatorias múltiples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables aleatorias múltiples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_9_1_variable_aleatoria_multiple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de probabilidad acumulativa conjunta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_9_2_propiedades_acumulativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Función de densidad probabilística conjunta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_9_3_propiedades_densidad_conjunta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propiedades de la función de densidad conjunta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_9_4_independencia_estadistica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Independencia estadística
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Momentos de las variables aleatorias múltiples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Momentos de las variables aleatorias múltiples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_10_1_valor_esperado_momentos_correlacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Valor esperado, momentos conjuntos alrededor del origen y correlación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_10_2_independencia_ortogonalidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Independencia, ortogonalidad y momentos centrales conjuntos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de variables aleatorias múltiples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Transformaciones de variables aleatorias múltiples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_11_1_transformacion_va_multiples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformaciones de variables aleatorias múltiples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_11_2_vida_util_y_distribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vida útil de un componente y distribución probabilística
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Teorema del límite central, desigualdades de Chebyshev y Markov y ley de los grandes números
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Teorema del límite central, desigualdades de Chebyshev y Markov y ley de los grandes números
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_12_1_limite_central_sumas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teorema del límite central para sumas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_12_2_limite_central_muestras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teorema del límite central para muestras
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_12_3_desigualdad_chebyshev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desigualdad de Chebyshev
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_12_4_desigualdad_markov/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desigualdad de Markov y ley de los números grandes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Procesos aleatorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Procesos aleatorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Procesos aleatorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Procesos aleatorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_13_1_concepto_estocastico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definiciones y concepto de un proceso estocástico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_13_2_clasificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clasificación de procesos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_13_3_funciones_distribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones de distribución e independencia estadística
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_13_4_estacionaridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estacionaridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ergodicidad y funciones de correlación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ergodicidad y funciones de correlación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_14_1_ergodicidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Promedios en el tiempo y ergodicidad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_14_2_correlacion_covarianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones de correlación y covarianza
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_14_3_funciones_covarianza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones de covarianza
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Características espectrales de los procesos aleatorios
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Características espectrales de los procesos aleatorios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_15_1_espectro_densidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Espectro de densidad de potencia y sus propiedades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_15_2_propiedades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propiedades de la densidad espectral y definiciones de ruido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Respuesta de sistemas lineales a una señal aleatoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Respuesta de sistemas lineales a una señal aleatoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_16_1_respuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Respuesta del sistema y valor cuadrático medio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_16_2_autocorrelacion_caracteristicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autocorrelaciones y características espectrales de la respuesta del sistema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_0_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Proceso contador de Poisson
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Proceso contador de Poisson
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_17_1_proceso_funciones_poisson/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso aleatorio de Poisson y sus funciones de densidad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_17_2_momento_densidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Momentos de la distribución de Poisson y probabilidad conjunta y condicional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo continuo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov en tiempo continuo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_18_1_definicion_markov/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de cadenas de Markov y deducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_18_2_nacimiento_muerte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso de nacimiento y muerte en tiempo continuo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_18_3_teoria_de_colas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teoría de colas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vector de probabilidad de estado estable
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Vector de probabilidad de estado estable
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_19_1_vector_estable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector de probabilidad de estado estable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_19_2_cola_servidores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cola de un solo servidor y de un número infinito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_19_3_sistema_colas_mms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sistema de colas M/M/s
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo discreto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov en tiempo discreto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_20_1_markov_discreto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo discreto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_20_2_markov_discreto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    La matriz de transición de orden t
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_20_3_markov_discreto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ecuaciones de Chapman - Kolgomorov y Vector de probabilidad pt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cadenas de Markov en tiempo discreto y vector de estado estable
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cadenas de Markov en tiempo discreto y vector de estado estable
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_21_1_markov_estado_estable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    El vector de probabilidad en estado estable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_21_2_markov_estado_estable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proceso cíclico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#asignaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asignaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asignaciones-de-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asignaciones de documentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentaciones-en-overleaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentaciones en Overleaf
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modelos-probabilisticos-de-senales-y-sistemas">Modelos Probabilísticos de Señales y Sistemas</h1>
+<p>Estas son notas de clase del curso, acompañados de ejercicios de la teoría y de programación.</p>
+<h2 id="asignaciones">Asignaciones</h2>
+<ol>
+<li>
+<p>(2%) ¡Repartir estrellas! Visitar GitHub con su cuenta (la misma que será usada en el proyecto) y colocar una estrella en los siguientes repositorios relacionados con el curso:</p>
+<dl>
+<dt><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> <a href="https://github.com/fabianabarca/mpss"><strong>mpss</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></a> </dt>
+<dd>
+<p>Este repositorio de notas de clase</p>
+</dd>
+<dt><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> <a href="https://github.com/fabianabarca/pyx"><strong>pyx</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></a> </dt>
+<dd>
+<p>Tutoriales introductorios de Python y sus herramientas para análisis de datos</p>
+</dd>
+<dt><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> <a href="https://github.com/fabianabarca/kalouk"><strong>kalouk</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></a> </dt>
+<dd>
+<p>Presentaciones web para matemáticas y programación, desarrollado para este curso</p>
+</dd>
+<dt><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> <a href="https://github.com/fabianabarca/slidev-theme-kalouk"><strong>slidev-theme-kalouk</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></a></dt>
+<dd>
+<p>Tema visual de Kalouk para <a href="https://sli.dev/">Slidev</a>, la plataforma de presentaciones web base</p>
+</dd>
+<dt><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> <a href="https://github.com/fabianabarca/slidev-addon-kalouk"><strong>slidev-addon-kalouk</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></a></dt>
+<dd>
+<p>Funcionalidades de Kalouk para <a href="https://sli.dev/">Slidev</a>, la plataforma de presentaciones web base</p>
+</dd>
+</dl>
+</li>
+<li>
+<p>(8%) Realizar una transcripción de las presentaciones según la distribución de personas y documentos de la tabla siguiente.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">¿Qué debo transcribir y cómo?</p>
+<p>En cada documento dentro de <code>docs/</code> hay una indicación de las secciones específicas para transcribir. Pueden ver una explicación varios ejemplos en las <a href="transcripcion/">notas sobre la transcripción</a>.</p>
+<p>Para saber cómo ejecutar localmente el repositorio, cómo ver en su navegador esta documentación y cómo editar en un ambiente integrado de desarrollo (VS Code, por ejemplo), pueden consultar el documento <a href="https://github.com/fabianabarca/mpss/blob/main/HOWTO.md">HOWTO</a> con las instrucciones básicas.</p>
+</div>
+<h5 id="asignaciones-de-documentos">Asignaciones de documentos</h5>
+<p>Actualmente cada documento tiene un contenido como:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gu">### Presentación</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[<span class="nt">0 - Teoría de conjuntos y análisis combinatorio</span>](<span class="na">https://www.overleaf.com/read/rdsdsqffjcwc#f222aa</span>)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gu">### Secciones</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">-</span><span class="w"> </span>Teoría de conjuntos (1 - 19)
+</span></code></pre></div>
+<p>donde indica cuál presentación corresponde (ver <a href="#presentaciones-en-overleaf">siguiente sección</a>) y cuáles secciones específicas.</p>
+<table>
+<thead>
+<tr>
+<th>Apellido</th>
+<th>Nombre</th>
+<th>Documento (link)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elizondo Castrillo</td>
+<td>Arianna Victoria</td>
+<td><a href="1_0_1_conjuntos/"><code>1_0_1_conjuntos.md</code></a></td>
+</tr>
+<tr>
+<td>Villalobos Vega</td>
+<td>Raúl Andrés</td>
+<td><a href="1_0_2_combinatorio/"><code>1_0_2_combinatorio.md</code></a></td>
+</tr>
+<tr>
+<td>Martínez Jiménez</td>
+<td>Kenneth Josué</td>
+<td><a href="1_1_1_la_probabilidad/"><code>1_1_1_la_probabilidad.md</code></a></td>
+</tr>
+<tr>
+<td>Vega Ureña</td>
+<td>Yendry Patricia</td>
+<td><a href="1_1_2_notas.md"><code>1_1_2_notas.md</code></a></td>
+</tr>
+<tr>
+<td>López López</td>
+<td>Sebastián</td>
+<td><a href="1_2_1_conjunta_total/"><code>1_2_1_conjunta_total.md</code></a></td>
+</tr>
+<tr>
+<td>Arce Arias</td>
+<td>Abraham Isaac</td>
+<td><a href="1_2_2_bayes/"><code>1_2_2_bayes.md</code></a></td>
+</tr>
+<tr>
+<td>Acosta Mendoza</td>
+<td>Luis Fernando</td>
+<td><a href="1_3_1_eventos_independientes.md"><code>1_3_1_eventos_independientes.md</code></a></td>
+</tr>
+<tr>
+<td>Vargas Jarquín</td>
+<td>Nicole</td>
+<td><a href="1_3_2_pruebas_bernoulli/"><code>1_3_2_pruebas_bernoulli.md</code></a></td>
+</tr>
+<tr>
+<td>Hurtado Ramírez</td>
+<td>Jerry Adolfo</td>
+<td><a href="2_4_1_variables_aleatorias/"><code>2_4_1_variables_aleatorias.md</code></a></td>
+</tr>
+<tr>
+<td>Mora Porras</td>
+<td>Bryan</td>
+<td><a href="2_4_2_funciones_distribucion_acumulativa/"><code>2_4_2_funciones_distribucion_acumulativa.md</code></a></td>
+</tr>
+<tr>
+<td>Arroyo Sánchez</td>
+<td>Charlie José</td>
+<td><a href="2_4_3_funciones_probabilidad/"><code>2_4_3_funciones_probabilidad.md</code></a></td>
+</tr>
+<tr>
+<td>Feng Wu</td>
+<td>Evelyn</td>
+<td><a href="2_4_4_funciones_aplicacion_comun/"><code>2_4_4_funciones_aplicacion_comun.md</code></a></td>
+</tr>
+<tr>
+<td>Rojas Álvarez</td>
+<td>Cristhian Estuard</td>
+<td><a href="2_5_1_funcion_acumulativa_condicional/"><code>2_5_1_funcion_acumulativa_condicional.md</code></a></td>
+</tr>
+<tr>
+<td>León Solano</td>
+<td>José Armando</td>
+<td><a href="2_5_2_casos_especiales/"><code>2_5_2_casos_especiales.md</code></a></td>
+</tr>
+<tr>
+<td>Rojas Rojas</td>
+<td>Oscar Francisco</td>
+<td><a href="2_5_3_funcion_densidad_condicional/"><code>2_5_3_funcion_densidad_condicional.md</code></a></td>
+</tr>
+<tr>
+<td>Fuentes Córdoba</td>
+<td>Oscar Alfonso</td>
+<td><a href="2_6_1_valor_esperado_va/"><code>2_6_1_valor_esperado_va.md</code></a></td>
+</tr>
+<tr>
+<td>Arias Abarca</td>
+<td>Oscar Santiago</td>
+<td><a href="2_6_2_momentos_va/"><code>2_6_2_momentos_va.md</code></a></td>
+</tr>
+<tr>
+<td>Vado Chavarría</td>
+<td>Wendolyn Maguel</td>
+<td><a href="2_7_1_generadora_caracteristica/"><code>2_7_1_generadora_caracteristica.md</code></a></td>
+</tr>
+<tr>
+<td>González Gámez</td>
+<td>Jacob</td>
+<td><a href="2_7_2_ejemplos/"><code>2_7_2_ejemplos.md</code></a></td>
+</tr>
+<tr>
+<td>Madrigal Chaves</td>
+<td>André</td>
+<td><a href="2_7_3_ejemplos_de_determinacion/"><code>2_7_3_ejemplos_de_determinacion.md</code></a></td>
+</tr>
+<tr>
+<td>Carmona Zelaya</td>
+<td>Josué Darío</td>
+<td><a href="2_7_4_ejemplos_de_determinacion/"><code>2_7_4_ejemplos_de_determinacion.md</code></a></td>
+</tr>
+<tr>
+<td>Altamiranda Solano</td>
+<td>Christian</td>
+<td><a href="2_8_1_disipacion_potencia/"><code>2_8_1_disipacion_potencia.md</code></a></td>
+</tr>
+<tr>
+<td>Quirós Olivares</td>
+<td>Aylin Denise</td>
+<td><a href="2_8_2_transformaciones_va/"><code>2_8_2_transformaciones_va.md</code></a></td>
+</tr>
+<tr>
+<td>Álvarez Sandí</td>
+<td>Joseph Alberto</td>
+<td><a href="2_8_3_no_monotonicas/"><code>2_8_3_no_monotonicas.md</code></a></td>
+</tr>
+<tr>
+<td>Mena Porras Nicole</td>
+<td>Andreína</td>
+<td><a href="3_10_1_valor_esperado_momentos_correlacion/"><code>3_10_1_valor_esperado_momentos_correlacion.md</code></a></td>
+</tr>
+<tr>
+<td>Godínez Duran</td>
+<td>Alejandro</td>
+<td><a href="3_10_2_independencia_ortogonalidad/"><code>3_10_2_independencia_ortogonalidad.md</code></a></td>
+</tr>
+<tr>
+<td>Canales Salvatierra</td>
+<td>Jeaustin David</td>
+<td><a href="3_11_1_transformacion_va_multiples/"><code>3_11_1_transformacion_va_multiples.md</code></a></td>
+</tr>
+<tr>
+<td>Wolfe Clayton</td>
+<td>Kevin Ulises</td>
+<td><a href="3_11_2_vida_util_y_distribucion/"><code>3_11_2_vida_util_y_distribucion.md</code></a></td>
+</tr>
+<tr>
+<td>Montero Campos</td>
+<td>Cristopher David</td>
+<td><a href="3_12_1_limite_central_sumas/"><code>3_12_1_limite_central_sumas.md</code></a></td>
+</tr>
+<tr>
+<td>Jiménez Salazar</td>
+<td>Nathaly</td>
+<td><a href="3_12_2_limite_central_muestras/"><code>3_12_2_limite_central_muestras.md</code></a></td>
+</tr>
+<tr>
+<td>González Mora</td>
+<td>Ramsés Elías</td>
+<td><a href="3_12_3_desigualdad_chebyshev/"><code>3_12_3_desigualdad_chebyshev.md</code></a></td>
+</tr>
+<tr>
+<td>Fonseca Obando</td>
+<td>Rachel Berenizce</td>
+<td><a href="3_12_4_desigualdad_markov/"><code>3_12_4_desigualdad_markov.md</code></a></td>
+</tr>
+<tr>
+<td>Jiménez Ortega</td>
+<td>Gerardo Alejandro</td>
+<td><a href="3_9_1_variable_aleatoria_multiple/"><code>3_9_1_variable_aleatoria_multiple.md</code></a></td>
+</tr>
+<tr>
+<td>Corrales Duarte</td>
+<td>Esteban</td>
+<td><a href="3_9_2_propiedades_acumulativa/"><code>3_9_2_propiedades_acumulativa.md</code></a></td>
+</tr>
+<tr>
+<td>Fallas Jiménez</td>
+<td>Martín Leandro</td>
+<td><a href="3_9_3_propiedades_densidad_conjunta/"><code>3_9_3_propiedades_densidad_conjunta.md</code></a></td>
+</tr>
+<tr>
+<td>Escobar Arrieta</td>
+<td>Guillermo</td>
+<td><a href="3_9_4_independencia_estadistica/"><code>3_9_4_independencia_estadistica.md</code></a></td>
+</tr>
+<tr>
+<td>Aguilar Chacón</td>
+<td>Carlos Ramiro</td>
+<td><a href="4_13_1_concepto_estocastico/"><code>4_13_1_concepto_estocastico.md</code></a></td>
+</tr>
+<tr>
+<td>Arias Fallas</td>
+<td>Caleb</td>
+<td><a href="4_13_2_clasificacion/"><code>4_13_2_clasificacion.md</code></a></td>
+</tr>
+<tr>
+<td>Aragón Herrera</td>
+<td>Esteban Andrés</td>
+<td><a href="4_13_3_funciones_distribucion/"><code>4_13_3_funciones_distribucion.md</code></a></td>
+</tr>
+<tr>
+<td>Guillén Cordero</td>
+<td>Karina</td>
+<td><a href="4_13_4_estacionaridad/"><code>4_13_4_estacionaridad.md</code></a></td>
+</tr>
+<tr>
+<td>Rojas Gutiérrez</td>
+<td>Sebastián</td>
+<td><a href="4_14_1_ergodicidad/"><code>4_14_1_ergodicidad.md</code></a></td>
+</tr>
+<tr>
+<td>Garro Arias</td>
+<td>Danny Andrés</td>
+<td><a href="4_14_2_correlacion_covarianza/"><code>4_14_2_correlacion_covarianza.md</code></a></td>
+</tr>
+<tr>
+<td>Ruiz Martínez</td>
+<td>Aarón Andrés</td>
+<td><a href="4_14_3_funciones_covarianza/"><code>4_14_3_funciones_covarianza.md</code></a></td>
+</tr>
+<tr>
+<td>Solís González</td>
+<td>Fanny Mariana</td>
+<td><a href="4_15_1_espectro_densidad/"><code>4_15_1_espectro_densidad.md</code></a></td>
+</tr>
+<tr>
+<td>Víquez Solano</td>
+<td>Daniel</td>
+<td><a href="4_15_2_propiedades/"><code>4_15_2_propiedades.md</code></a></td>
+</tr>
+<tr>
+<td>Fallas Gutiérrez</td>
+<td>César Luis</td>
+<td><a href="4_16_1_respuesta/"><code>4_16_1_respuesta.md</code></a></td>
+</tr>
+<tr>
+<td>Obando Picado</td>
+<td>Joan Josué</td>
+<td><a href="4_16_2_autocorrelacion_caracteristicas/"><code>4_16_2_autocorrelacion_caracteristicas.md</code></a></td>
+</tr>
+<tr>
+<td>Sierra Berrocal</td>
+<td>Alfredo Auriel</td>
+<td><a href="5_17_1_proceso_funciones_poisson/"><code>5_17_1_proceso_funciones_poisson.md</code></a></td>
+</tr>
+<tr>
+<td>Cruz Meza</td>
+<td>Zoé Deliana</td>
+<td><a href="5_17_2_momento_densidad/"><code>5_17_2_momento_densidad.md</code></a></td>
+</tr>
+<tr>
+<td>Montero Calderón</td>
+<td>Jean Paul</td>
+<td><a href="5_18_1_definicion_markov/"><code>5_18_1_definicion_markov.md</code></a></td>
+</tr>
+<tr>
+<td>Rojas Morúa</td>
+<td>Luis Fernando</td>
+<td><a href="5_18_2_nacimiento_muerte/"><code>5_18_2_nacimiento_muerte.md</code></a></td>
+</tr>
+<tr>
+<td>Sáenz Díaz</td>
+<td>José Ignacio</td>
+<td><a href="5_18_3_teoria_de_colas/"><code>5_18_3_teoria_de_colas.md</code></a></td>
+</tr>
+<tr>
+<td>Rosales Sánchez</td>
+<td>Mariana</td>
+<td><a href="5_19_1_vector_estable/"><code>5_19_1_vector_estable.md</code></a></td>
+</tr>
+<tr>
+<td>Vargas Arce</td>
+<td>Camila Amelia</td>
+<td><a href="5_19_2_cola_servidores/"><code>5_19_2_cola_servidores.md</code></a></td>
+</tr>
+<tr>
+<td>Jiménez Mata</td>
+<td>Cristhoper</td>
+<td><a href="5_19_3_sistema_colas_mms/"><code>5_19_3_sistema_colas_mms.md</code></a></td>
+</tr>
+<tr>
+<td>Coto Portuguez</td>
+<td>José Pablo</td>
+<td><a href="5_20_1_markov_discreto/"><code>5_20_1_markov_discreto.md</code></a></td>
+</tr>
+<tr>
+<td>Morales Salazar</td>
+<td>Monserrat</td>
+<td><a href="5_20_2_markov_discreto/"><code>5_20_2_markov_discreto.md</code></a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="presentaciones-en-overleaf">Presentaciones en Overleaf</h5>
+<p>Link externo a la presentación en LaTeX (modo lectura).</p>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.overleaf.com/read/rdsdsqffjcwc">0 - Teoría de conjuntos y análisis combinatorio</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/xgkxwrrksrvh">1 - La probabilidad</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/mpzrvppyvszr">2 - Probabilidad conjunta, condicional y teorema de Bayes</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/mxsmghsmshmx">3 - Eventos independientes y pruebas de Bernoulli</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/tqgnrvbdpdvr">4 - Variables aleatorias</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/shfztrcvfysx">5 - Funciones de distribución condicionales</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/sddgrhxfdtjs">6 - Momentos de una variable aleatoria</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/cgwskrxfpkps">7 - Funciones que dan momentos</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/ndsxqhnskwzg">8 - Transformaciones de una variable aleatoria</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/wxprpjfvhzwg">9 - Variables aleatorias múltiples</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/kggsyrzbdrxc">10 - Momentos de variables aleatorias múltiples</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/ffgdtstgxvsy">11 - Transformaciones de variables aleatorias múltiples</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/zhzxhphdwrwp">12 - Teorema del límite central y otros</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/qmfpvhzfjfdy">13 - Procesos estocásticos</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/zxthcgbwqyvb">14 - Ergodicidad y funciones de correlación</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/cknvzwypbjxd">15 - Características espectrales de procesos estocásticos</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/yfnrpxpcmvsz">16 - Respuesta de sistemas lineales a una señal aleatoria</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/ctgmjmgscrhj">17 - Proceso contador de Poisson</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/wmkypgnzztdn">18 - Cadenas de Markov de tiempo continuo</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/cpfydpqvyxzs">19 - Markov de tiempo continuo y el vector de estado estable</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/jmzgnjrhfhnj">20 - Cadenas de Markov de tiempo discreto</a></td>
+</tr>
+<tr>
+<td><a href="https://www.overleaf.com/read/zwyprftkwvvn">21 - Markov de tiempo discreto y el vector de estado estable</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+        
+          
+          <a href="transcripcion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Sobre la transcripción">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Sobre la transcripción
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "content.footnote.tooltips"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
