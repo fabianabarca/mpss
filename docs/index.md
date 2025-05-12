@@ -22,6 +22,10 @@ Estas son notas de clase del curso, acompañados de ejercicios de la teoría y d
 
     :   Tema visual de Kalouk para [Slidev](https://sli.dev/), la plataforma de presentaciones web base
 
+    :material-github: [**slidev-addon-kalouk** :star:](https://github.com/fabianabarca/slidev-addon-kalouk)
+
+    :   Funcionalidades de Kalouk para [Slidev](https://sli.dev/), la plataforma de presentaciones web base
+
 2. (8%) Realizar una transcripción de las presentaciones según la distribución de personas y documentos de la tabla siguiente.
 
 !!! note "¿Qué debo transcribir y cómo?"
