@@ -7,7 +7,7 @@
 # Algunas funciones de distribución probabilística de aplicación común
 
 ----
--Elaborado por Evelyn Feng Wu B82870
+Elaborado por Evelyn Feng Wu B82870
 
 ----
 
