@@ -1,21 +1,12 @@
-### Presentación
-
-[4 - Variables aleatorias](https://www.overleaf.com/read/tqgnrvbdpdvr#f90d57)
-
-### Secciones
-
 # Algunas funciones de distribución probabilística de aplicación común
 
 ----
-Elaborado por Evelyn Feng Wu B82870
 
-----
-
-## Función de densidad gaussiana o normal
+## **Función de densidad gaussiana o normal**
 
 ### Definición
 
-La función gaussiana tiene la *forma* general de la función:
+La función gaussiana tiene la *forma* general de la función
 
 $$
 f(x) = e^{-x^2}
@@ -30,8 +21,10 @@ $$
 
 
 donde $\sigma_X > 0$ y $-\infty < \mu_X < \infty$ son constantes reales, conocidas como desviación estándar y media, respectivamente.
-La diferencia entre las ecuaciones anteriores es que (6) aplica la normalización (el área bajo la curva es 1)
-y el desplazamiento en el eje real (¡y por eso se ve tan complicada, pero la forma es la misma!).
+
+!!! note "Nota" 
+  
+    La diferencia entre las ecuaciones anteriores es que (6) aplica la normalización (el área bajo la curva es 1) y el desplazamiento en el eje real (¡y por eso se ve tan complicada, pero la forma es la misma!).
 
 
 ### Función de densidad normal I - Gráfica (la "campana" gaussiana)
@@ -54,22 +47,24 @@ y el desplazamiento en el eje real (¡y por eso se ve tan complicada, pero la fo
 
 **Figura**: Función de distribución de probabilidad gaussiana II
 
+---
 
-### Ejemplos de aplicación
+:material-pencil-box: **EJEMPLO DE APLICACIÓN**
 
-Como la variable gaussiana es tan común, tiene una notación especial. Al decir:
+!!! note ""
+    Como la variable gaussiana es tan común, tiene una notación especial. Al decir:
 
-$X : \mathcal{N}(\mu,\sigma^2) \quad \text{o} \quad X \sim \mathcal{N}(\mu,\sigma^2)$
+    $X : \mathcal{N}(\mu,\sigma^2) \quad \text{o} \quad X \sim \mathcal{N}(\mu,\sigma^2)$
 
-significa que la variable aleatoria \( X \) tiene una distribución gaussiana o "normal" con media $\mu$ y varianza $\sigma_X^2$ (la desviación estándar es $\sigma_X$).
-
-
- **¿Dónde aparece?**
-En el ruido térmico que afecta a la electrónica y en cierto tipo de interferencia que posa un canal inalámbrico sobre las comunicaciones. Además de innumerables otros fenómenos físicos, económicos y sociales, algo que quizá se explicará con el **teorema del límite central**, más adelante.
+    significa que la variable aleatoria \( X \) tiene una distribución gaussiana o "normal" con media $\mu$ y varianza $\sigma_X^2$ (la desviación estándar es $\sigma_X$).
 
 
+    ### **¿Dónde aparece?**
+    En el ruido térmico que afecta a la electrónica y en cierto tipo de interferencia que posa un canal inalámbrico sobre las comunicaciones. Además de innumerables otros fenómenos físicos, económicos y sociales, algo que quizá se explicará con el **teorema del límite central**, más adelante.
 
-## Función de densidad uniforme
+---
+
+## **Función de densidad uniforme**
 
 ### Definición
 
@@ -101,15 +96,19 @@ para constantes reales $-\infty < a < \infty$ y $b > a$.
 
 **Figura**: Función de densidad uniforme
 
-### Ejemplos de aplicación
- **¿Dónde aparece?**  
-Cuando no se tiene mayor información sobre el comportamiento de la variable aleatoria puede asumirse un comportamiento uniforme.  
-**Ejemplo** (un mal ejemplo): una llamada de oficina sucederá entre las 8:00 am y las 5:00 pm con igual probabilidad.
+---
+:material-pencil-box: **EJEMPLO DE APLICACIÓN**
 
+!!! note ""
+    ### **¿Dónde aparece?**
+    Cuando no se tiene mayor información sobre el comportamiento de la variable aleatoria puede asumirse un comportamiento uniforme. 
+
+    ### **Un mal ejemplo**
+    Una llamada de oficina sucederá entre las 8:00 am y las 5:00 pm con igual probabilidad.
 
 ---
 
-## Función de densidad exponencial
+## **Función de densidad exponencial**
 
 ### Definición
 
@@ -147,13 +146,16 @@ $$
 
 **Figura**: Función de densidad de probabilidad exponencial
 
-### Ejemplos de aplicación
- **¿Dónde aparece?**  
-Ocurre en problemas de tiempo de espera o en el cálculo de la vida útil de dispositivos.
+---
+:material-pencil-box: **EJEMPLO DE APLICACIÓN**
+
+!!! note ""
+    ### **¿Dónde aparece?**
+    Ocurre en problemas de tiempo de espera o en el cálculo de la vida útil de dispositivos.
 
 ---
 
-## Función de densidad de Rayleigh
+## **Función de densidad de Rayleigh**
 
 ### Definición
 
@@ -183,14 +185,16 @@ para constantes reales $-\infty < a < \infty$ y $b > 0$.
 
 **Figura**: Función de densidad de probabilidad de Rayleigh
 
-### Ejemplos de aplicación
+---
+:material-pencil-box: **EJEMPLO DE APLICACIÓN**
 
- **¿Dónde aparece?**
-Aparece en errores de aterrizaje de cohetes, fluctuaciones aleatorias de la envolvente de ciertas formas de onda, la distribución radial de los errores en un tablero de dardos, o los tiempos de llegada de las señales de múltiples trayectorias en transmisión inalámbrica.
+!!! note ""
+    ### **¿Dónde aparece?**
+    Aparece en errores de aterrizaje de cohetes, fluctuaciones aleatorias de la envolvente de ciertas formas de onda, la distribución radial de los errores en un tablero de dardos, o los tiempos de llegada de las señales de múltiples trayectorias en transmisión inalámbrica.
 
 ---
 
-## Función de densidad binomial
+## **Función de densidad binomial**
 
 ### Definición
 
@@ -212,14 +216,16 @@ $$
 
 **Figura**: Función de densidad de probabilidad discreta binomial
 
-### Ejemplos de aplicación
+---
+:material-pencil-box: **EJEMPLO DE APLICACIÓN**
 
- **¿Dónde aparece?**
-Modela la posibilidad de superar un umbral aceptable dada una tasa de ``errores'' (u ocurrencias de un evento). Se usa en análisis de riesgo, estimación de personal necesario según demanda de servicios, o número de defectos en un lote de producción.
+!!! note ""
+    ### **¿Dónde aparece?**
+    Modela la posibilidad de superar un umbral aceptable dada una tasa de ``errores'' (u ocurrencias de un evento). Se usa en análisis de riesgo, estimación de personal necesario según demanda de servicios, o número de defectos en un lote de producción.
 
 ---
 
-## Función de densidad de Poisson
+## **Función de densidad de Poisson**
 
 ### Definición
 
@@ -241,14 +247,16 @@ donde $b > 0$ es una constante real. Cuando son graficadas, estas funciones pare
 
 **Figura**: Función de densidad de probabilidad de Poisson
 
-### Ejemplos de aplicación
+---
+:material-pencil-box: **EJEMPLO DE APLICACIÓN**
 
- **¿Dónde aparece?**
-Se utiliza para describir eventos esporádicos en una población grande, como la mutación de una célula, o los errores de bits en una transmisión de datos.
+!!! note ""
+    ### **¿Dónde aparece?**
+    Se utiliza para describir eventos esporádicos en una población grande, como la mutación de una célula, o los errores de bits en una transmisión de datos.
 
 ---
 
-## ¡Y hay muchas (muchas) distribuciones más!
+## **¡Y hay muchas (muchas) distribuciones más!**
 
 |                         |                       |                      |                      |
 |-------------------------|-----------------------|----------------------|----------------------|
@@ -274,24 +282,23 @@ Se utiliza para describir eventos esporádicos en una población grande, como la
 
 
 ---
+!!! tip "¿Y aplicaciones? Muchas, también"
 
-## ¿Y aplicaciones? Muchas, también
-
-- Para describir el número de eventos que ocurren en un periodo de tiempo
-- Para describir el número de intentos necesarios hasta conseguir el primer acierto
-- Para predecir tiempos de espera en sistemas telefónicos
-- Para estimar la esperanza de vida poblacional
-- Para modelar procesos farmacocinéticos (relacionados con la acción de los medicamentos en el cuerpo)
-- Para describir la distribución de tamaños de determinadas partículas
-- Para análisis genético de poblaciones
-- Para pronosticar fenómenos atmosféricos
-- Para pronosticar movimientos de la bolsa de valores
-- Para calcular los recursos necesarios en una epidemia
-- ...
+    - Para describir el número de eventos que ocurren en un periodo de tiempo
+    - Para describir el número de intentos necesarios hasta conseguir el primer acierto
+    - Para predecir tiempos de espera en sistemas telefónicos
+    - Para estimar la esperanza de vida poblacional
+    - Para modelar procesos farmacocinéticos (relacionados con la acción de los medicamentos en el cuerpo)
+    - Para describir la distribución de tamaños de determinadas partículas
+    - Para análisis genético de poblaciones
+    - Para pronosticar fenómenos atmosféricos
+    - Para pronosticar movimientos de la bolsa de valores
+    - Para calcular los recursos necesarios en una epidemia
+    - ...
 
 ---
 
-## Videos y referencias en internet
+## **Videos y referencias en internet**
 
 - **Variables aleatorias discretas y continuas | Estadística UNED**
   *Frísica y Mates*, https://youtu.be/n0T_HcJ7oak
