@@ -1,7 +1,3 @@
-### Presentación
-
-[8 - Transformaciones de una variable aleatoria](https://www.overleaf.com/read/ndsxqhnskwzg#a6c0a8)
-
 ## Transformaciones de una variable aleatoria I
 
 !!! tip "Problema a resolver"
@@ -178,4 +174,3 @@ Dado que la pendiente de $T^{-1}(y)$ es negativa pues la función es decreciente
     \begin{equation}
     f_Y(y) = f_X\left[ h(y) \right] \left\vert \frac{\mathrm{d} h(y)}{\mathrm{d} y} \right\vert
     \end{equation}
-
