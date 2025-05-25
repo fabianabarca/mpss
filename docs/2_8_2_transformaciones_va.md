@@ -1,7 +1,3 @@
-### Presentación
-
-[8 - Transformaciones de una variable aleatoria](https://www.overleaf.com/read/ndsxqhnskwzg#a6c0a8)
-
 ## Transformaciones de una variable aleatoria I
 
 !!! tip "Problema a resolver"
