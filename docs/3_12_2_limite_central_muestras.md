@@ -27,18 +27,20 @@ Aunque una **población** tenga una distribución con media $\mu = E[X]$, una **
     Sea $X \sim \mathsf{unif}(0,1)$ con $\mu = E[X] = \mathbf{0.5}$. Sea además $X_i$ **una muestra** de esta distribución con 500 elementos y con una media estadística de $\mu_{X_i} = 0.5138 \neq 0.5$.
 
 
-    ![](images/12_TLCmuestra.svg)
+    ![](images/12_TLCmuestra.svg){style="display:block;margin:auto;"}
 
 Al hacer una simulación de $N$ muestras se obtienen $N$ medias distintas $\mu_{X_i}$. ¿Cómo se distribuyen estos valores alrededor de $\mu$ y cómo cambia la distribución según $N$?
 
-![](images/12_TLCmedias.svg)
+![](images/12_TLCmedias.svg){style="display:block;margin:auto;"}
 
 !!! note ""
 
     Entre más grande es $N$ más "agrupados" están los valores de la media de la muestra $\overline{X_N} = \mu_N$ alrededor de la "media verdadera" de la población, $\mu$.
 
 
-![](images/12_grupos_dots.svg)  ![](images/12_medias_muestras.svg) 
+![](images/12_grupos_dots.svg){ style="display:inline-block; width:25%; margin-right:3%;" }
+![](images/12_medias_muestras.svg){ style="display:inline-block; width:70%;" }
+
 
 :material-pencil-box: **EJEMPLO**
 
@@ -56,4 +58,4 @@ Al hacer una simulación de $N$ muestras se obtienen $N$ medias distintas $\mu_{
     P(\overline{X_N} > 3.5) \approx P \left( Z > \frac{3.5 - \mu}{\sigma/\sqrt{N}} \right) = P \left( Z > \frac{3.5 - 3.2}{0.24} \right) = 1 - F_{Z}(1.25) = 0.1056
     \end{equation*}
 
-    La probabilidad es pequeña porque la muestra es grande y la desviación estándar de la muestra es muy pequeña, de solo 0,24, de forma tal que la media de una muestra de 100 personas se acerca ``bastante'' a la media de la población de quizá miles de personas.
+    La probabilidad es pequeña porque la muestra es grande y la desviación estándar de la muestra es muy pequeña, de solo 0,24, de forma tal que la media de una muestra de 100 personas se acerca "bastante" a la media de la población de quizá miles de personas.
