@@ -139,9 +139,9 @@ correspondientes a *T<sub>1</sub>* y *T<sub>2</sub>*:
 \begin{equation} 
 \begin{aligned}
   P(T_{1} = \min\{T_{1}, T_{2}\}) & = P(T_{1} < T_{2}) \\
-  	& = \iint_{T_1 < T_2} f_{T_{1}, T_{2}}(t_{1},t_{2}) \di{t_1} \di{t_2} \\
-  	& = \int_{0}^{\infty}\int_{0}^{t_{2}}\alpha e^{-\alpha t_{1}}\beta e^{-\beta t_{2}} \di{t_1} \di{t_2} \\
-  	& = \int_{0}^{\infty}(1 - e^{-\alpha t_{2}})\beta e^{-\beta t_{2}} \di{t_2} \\
+  	& = \iint_{T_1 < T_2} f_{T_{1}, T_{2}}(t_{1},t_{2}) ~\mathrm{d} t_1 ~\mathrm{d} t_2 \\
+  	& = \int_{0}^{\infty}\int_{0}^{t_{2}}\alpha e^{-\alpha t_{1}}\beta e^{-\beta t_{2}} ~\mathrm{d} t_1 ~\mathrm{d} t_2 \\
+  	& = \int_{0}^{\infty}(1 - e^{-\alpha t_{2}})\beta e^{-\beta t_{2}} ~\mathrm{d} t_2 \\
  	& = 1 - \frac{\beta}{\alpha + \beta} = \frac{\alpha}{\alpha + \beta} 
 \end{aligned} 
 \end{equation}
