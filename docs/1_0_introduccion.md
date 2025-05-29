@@ -1,1 +1,0 @@
-La probabilidad es una rama de la matemática con inmensa aplicación práctica en muchas disciplinas: desde el quehacer personal y doméstico hasta grandes decisiones sociales. En nuestra disciplina es, además, fundamental para el análisis de señales y sistemas.
