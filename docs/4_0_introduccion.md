@@ -1,1 +1,0 @@
-Los procesos aleatorios son los terceros “objetos aleatorios” por analizar. Incorporan una segunda variable independiente, el tiempo, que los hace útiles en la descripción de fenómenos cambiantes o dinámicos tales como las señales y los sistemas.
