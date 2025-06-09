@@ -1,6 +1,5 @@
 # Propiedades de la función de densidad conjunta
-
-## Propiedades de la función de densidad conjunta
+---
 
 1) La función de densidad es siempre positiva:
 
@@ -13,7 +12,7 @@ $$
 2) El volumen bajo la superficie en todo el plano \( XY \) es unitario:
 
 $$
-\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f_{X,Y}(x,y)\,dx\,dy = 1
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f_{X,Y}(x,y)\,\mathrm{d} x\,\mathrm{d} y = 1
 $$
 
 ---
@@ -22,7 +21,7 @@ $$
 
 $$
 P(x_1 < X \leq x_2,\ y_1 < Y \leq y_2) =
-\int_{y_1}^{y_2} \int_{x_1}^{x_2} f_{X,Y}(x,y)\,dx\,dy
+\int_{y_1}^{y_2} \int_{x_1}^{x_2} f_{X,Y}(x,y)\,\mathrm{d} x\,\mathrm{d} y
 $$
 
 ---
@@ -31,7 +30,7 @@ $$
 
 $$
 F_{X,Y}(x,y) = P(X \leq x,\ Y \leq y) =
-\int_{-\infty}^{y} \int_{-\infty}^{x} f_{X,Y}(v_1,v_2)\,dv_1\,dv_2
+\int_{-\infty}^{y} \int_{-\infty}^{x} f_{X,Y}(v_1,v_2)\,\mathrm{d} v_1\,\mathrm{d} v_2
 $$
 
 ---
@@ -41,13 +40,13 @@ $$
 5a. Función acumulativa marginal de \( X \):
 
 $$
-F_X(x) = \int_{-\infty}^{x} \int_{-\infty}^{\infty} f_{X,Y}(v_1,v_2)\,dv_2\,dv_1
+F_X(x) = \int_{-\infty}^{x} \int_{-\infty}^{\infty} f_{X,Y}(v_1,v_2)\,\mathrm{d} v_2\,\mathrm{d} v_1
 $$
 
 5b. Función acumulativa marginal de \( Y \):
 
 $$
-F_Y(y) = \int_{-\infty}^{y} \int_{-\infty}^{\infty} f_{X,Y}(v_1,v_2)\,dv_1\,dv_2
+F_Y(y) = \int_{-\infty}^{y} \int_{-\infty}^{\infty} f_{X,Y}(v_1,v_2)\,\mathrm{d} v_1\,\mathrm{d} v_2
 $$
 
 ---
@@ -57,18 +56,20 @@ $$
 6a. Función de densidad marginal de \( X \):
 
 $$
-f_X(x) = \int_{-\infty}^{\infty} f_{X,Y}(x,y)\,dy = \frac{d}{dx} F_X(x)
+f_X(x) = \int_{-\infty}^{\infty} f_{X,Y}(x,y)\,\mathrm{d} y = \frac{d}{\mathrm{d} x} F_X(x)
 $$
 
 6b. Función de densidad marginal de \( Y \):
 
 $$
-f_Y(y) = \int_{-\infty}^{\infty} f_{X,Y}(x,y)\,dx = \frac{d}{dy} F_Y(y)
+f_Y(y) = \int_{-\infty}^{\infty} f_{X,Y}(x,y)\,\mathrm{d} x = \frac{d}{\mathrm{d} y} F_Y(y)
 $$
 
 ---
 
-## Ejemplo de cálculo de densidades marginales
+:material-pencil-box: **EJEMPLO**
+
+!!! example "¿Cómo se calculan funciones de densidad marginales?"
 
 Encuentre \( f_X(x) \) y \( f_Y(y) \) cuando la función de densidad conjunta es:
 
@@ -76,29 +77,27 @@ $$
 f_{X,Y}(x,y) = x\,e^{-x(y+1)}\,u(x)\,u(y)
 $$
 
+Que se muestra a continuación:
+
 ![Gráfico de la función en cuestión](images/9_pdf_bivariada.svg)
 
----
-
-Para la solución, se debe tomar la función de densidad conjunta e integrar primero sobre todo el ámbito de valores de la variable aleatoria $Y$, para obtener la densidad de $X$.
+Para la solución, se debe tomar la función de densidad conjunta e integrar primero sobre todo el ámbito de valores de la variable aleatoria $Y$, para obtener la función de densidad de $X$:
 
 $$
 \begin{aligned}
-f_X(x) &= \int_{-\infty}^{\infty} u(x)u(y)\,x\,e^{-x(y+1)}\,dy \\
-       &= u(x)\,x\,e^{-x} \int_{0}^{\infty} e^{-x y}\,dy \\
+f_X(x) &= \int_{-\infty}^{\infty} u(x)u(y)\,x\,e^{-x(y+1)}\,\mathrm{d} y \\
+       &= u(x)\,x\,e^{-x} \int_{0}^{\infty} e^{-x y}\,\mathrm{d} y \\
        &= u(x)\,x\,e^{-x} \left[ \frac{e^{-x y}}{-x} \right] \Big|_0^{\infty} \\
        &= e^{-x} u(x)
 \end{aligned}
 $$
 
----
-
-Luego, se toma la función de densidad conjunta y se integra sobre todo el ámbito de valores de la variable aleatoria $X$, para obtener la función de densidad de $Y$.
+Luego, se toma la función de densidad conjunta y se integra sobre todo el ámbito de valores de la variable aleatoria $X$, para obtener la función de densidad de $Y$:
 
 $$
 \begin{aligned}
-f_Y(y) &= \int_{-\infty}^{\infty} u(x)u(y)\,x\,e^{-x(y+1)}\,dx \\
-       &= u(y) \int_{0}^{\infty} x\,e^{-x(y+1)}\,dx \\
+f_Y(y) &= \int_{-\infty}^{\infty} u(x)u(y)\,x\,e^{-x(y+1)}\,\mathrm{d} x \\
+       &= u(y) \int_{0}^{\infty} x\,e^{-x(y+1)}\,\mathrm{d} x \\
        &= u(y) \left[
          -\frac{x\,e^{-x(y+1)}}{y+1} \Big|_0^{\infty}
          -\frac{e^{-x(y+1)}}{(y+1)^2} \Big|_0^{\infty}
@@ -107,8 +106,10 @@ f_Y(y) &= \int_{-\infty}^{\infty} u(x)u(y)\,x\,e^{-x(y+1)}\,dx \\
 \end{aligned}
 $$
 
-En este cálculo se utilizó la técnica de la integración por partes.
+!!! note "En este cálculo se utilizó la técnica de la integración por partes"
+
+Gráfica de las funciones obtenidas:
+
+![Gráfico de las funciones resultantes](images/9_pdfs_marginales.svg)
 
 ---
-
-![Gráfico de la función en cuestión resuelto](images/9_pdfs_marginales.svg)
