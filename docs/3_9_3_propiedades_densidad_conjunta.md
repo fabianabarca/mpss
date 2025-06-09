@@ -71,13 +71,11 @@ $$
 
 !!! example "¿Cómo se calculan funciones de densidad marginales?"
 
-Encuentre \( f_X(x) \) y \( f_Y(y) \) cuando la función de densidad conjunta es:
+       Encuentre \( f_X(x) \) y \( f_Y(y) \) cuando la función de densidad conjunta es:
 
-$$
-f_{X,Y}(x,y) = x\,e^{-x(y+1)}\,u(x)\,u(y)
-$$
+       $f_{X,Y}(x,y) = x\,e^{-x(y+1)}\,u(x)\,u(y)$
 
-Que se muestra a continuación:
+Gráfica de la función en cuestión:
 
 ![Gráfico de la función en cuestión](images/9_pdf_bivariada.svg)
 
@@ -106,7 +104,17 @@ f_Y(y) &= \int_{-\infty}^{\infty} u(x)u(y)\,x\,e^{-x(y+1)}\,\mathrm{d} x \\
 \end{aligned}
 $$
 
-!!! note "En este cálculo se utilizó la técnica de la integración por partes"
+!!! note "En estos cálculos se utilizó la técnica de la integración por partes"
+
+Y finalmente:
+
+!!! note ""
+
+       Se tienen las funciones de densidad marginales de $f_{X,Y}(x,y)$:
+       
+       $f_X(x) = e^{-x} u(x)$
+
+       $f_Y(y) = \frac{1}{(y+1)^2} u(y)$
 
 Gráfica de las funciones obtenidas:
 
