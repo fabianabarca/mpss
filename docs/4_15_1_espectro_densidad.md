@@ -93,7 +93,7 @@ Sin embargo, no es todavía la función que necesitamos, por tres razones:
 \end{equation}
  
 \begin{equation}
-P_{XX} = \frac{1}{2\pi}\int_{-\infty}^{\infty}\lim_{T \rightarrow \infty}\frac{E[\vert X_{T}(\omega) \vert^2]}{2T} ~\mathrm{d} t     
+P_{XX} = \frac{1}{2\pi}\int_{-\infty}^{\infty}\lim_{T \rightarrow \infty}\frac{E[\vert X_{T}(\omega) \vert^2]}{2T} ~\mathrm{d} \omega    
 \end{equation}
 
 De aquí se obtienen las dos importantes conclusiones siguientes.
@@ -191,4 +191,4 @@ El promedio temporal de la función anterior es:
 
 ---
 
-:material-lightning-bolt: Es equivalente a elevar al cuadrado el valor efectivo $V_{RMS} = A/\sqrt{2}$ de la onda.c
+:material-lightning-bolt: Es equivalente a elevar al cuadrado el valor efectivo $V_{RMS} = A/\sqrt{2}$ de la onda.
