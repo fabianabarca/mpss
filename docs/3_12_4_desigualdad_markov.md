@@ -19,15 +19,13 @@ $$
 - La segunda desigualdad viene de aumentar el intervalo de integración de los puntos $w$ donde $w^2 \geq \epsilon^2,$ a la recta numérica de $-\infty$ a $+\infty$.  
 - $E[W^2]$ (el segundo momento ordinario) es igual en este caso a la varianza $\sigma^2$ (el segundo momento central) porque la media es cero y $\sigma^2 = E[W^2] - E^2[W]$.
 
----
 
-### **Desigualdad de Chebyshev**
+!!! tip "Desigualdad de Chebyshev"
+    Si $E[W] = 0$ y dado cualquier número positivo $\epsilon$, el evento que $W$ difiera en por lo menos $\epsilon$ de cero, está acotado por la probabilidad:
 
-Si $E[W] = 0$ y dado cualquier número positivo $\epsilon,$ el evento que $W$ difiera en por lo menos $\epsilon$ de cero, está acotado por la probabilidad: 
-
-$$
-P(\vert W \vert \geq \epsilon ) \leq \frac{\sigma^2}{\epsilon^2}
-$$
+    $$
+    P(|W| \geq \epsilon) \leq \frac{\sigma^2}{\epsilon^2}
+    $$
 
 ---
 
@@ -35,32 +33,26 @@ $$
 
 Si $\mu = E[X] \neq 0$ pero $W = X - \mu$, entonces $E[W] = 0$, y el desarrollo anterior aplica a $X$:
 
----
+!!! tip "Desigualdad de Chebyshev generalizada"
+    Sea $X$ una variable aleatoria con media finita $\mu$ y varianza finita $\sigma^2$. Entonces para $\epsilon > 0$ un número fijo, la probabilidad que $X$ difiera en a lo menos $\epsilon$ de su media, está acotada:
 
-#### **Desigualdad de Chebyshev generalizada**
+    $$
+    P(|X - \mu| \geq \epsilon) \leq \frac{\sigma^2}{\epsilon^2}
+    $$
 
-Sea $X$ una \va\ con media finita $\mu$ y varianza finita $\sigma^2$. Entonces para $\epsilon > 0$ un número fijo, la probabilidad que $X$ difiera en a lo menos $\epsilon$ de su media, está acotada:
-
-$$
-P(\vert X - \mu \vert \geq \epsilon ) \leq \frac{\sigma^2}{\epsilon^2}
-$$
-
-O en términos del evento complementario:  
-$$
-P(\vert X - \mu\vert < \epsilon ) \geq 1 - \frac{\sigma^2}{\epsilon^2}
-$$
+    O en términos del evento complementario:  
+    $$
+    P(|X - \mu| < \epsilon) \geq 1 - \frac{\sigma^2}{\epsilon^2}
+    $$
 
 **Comentario**: Este es un límite “laxo” en el sentido de que **no** es muy restrictivo y por tanto no muy preciso o informativo.
 
+
 ---
 
-### **Ejemplo de $\{-1,0,1\}$ para Chebyshev**
-
-#### **Planteamiento**
+### **Ejemplo de $\{-1,0,1\}$ para Chebyshev I**
 
 Si $X$ tiene tres posibles valores: $\{ -1, 0, 1 \}$, con probabilidades $\{ \frac{1}{18}, \frac{8}{9}, \frac{1}{18} \}$, respectivamente. ¿Cuál es la probabilidad  $P(\vert X - \mu \vert \geq 3\sigma)$ y cómo se compara con el límite de Chebyshev?
-
----
 
 - Recordar que $$E\left[ X \right] = \sum_{i=1}^{N}x_i P(x_i)$$  
 - También que $$\sigma_{X}^{2} = E\left[ \left( X- \overline{X} \right)^2 \right] = E[X^2] - E^2[X]$$  
@@ -68,7 +60,7 @@ Si $X$ tiene tres posibles valores: $\{ -1, 0, 1 \}$, con probabilidades $\{ \fr
 - Pero una forma equivalente es $$P( \vert X - \mu_X \vert \geq k\sigma_X ) \leq \frac{1}{k^2}$$  
 
 ---
-
+### **Ejemplo de $\{-1,0,1\}$ para Chebyshev II**
 La media y la varianza de la \va~ discreta se obtienen de la siguiente forma:
 
 $$
@@ -86,6 +78,7 @@ P( \vert X - \mu_X \vert \geq k\sigma_X ) = P( \vert X - 0 \vert \geq 3 \cdot \f
 $$
 
 ---
+### **Ejemplo de $\{-1,0,1\}$ para Chebyshev III**
 
 Mientras tanto, utilizando la PDF propiamente, se puede encontrar la probabilidad $P( \vert X \vert \geq 1 )$ solicitada. Considerando que solo hay tres valores posibles de $X$, $\{ -1, 0, 1 \}$, los elementos de interés son $\{ -1, 1 \}$ cuyas probabilidades son $1/18 + 1/18 = 1/9$, igual que con Chebyshev.
 
@@ -95,13 +88,15 @@ En general, la desigualdad de Chebyshev será mucho menos restrictiva que el an�
 
 
 ### **Desigualdad de Markov**
+---
+### **Desigualdad de Markov**
+!!! tip "Desigualdad de Markov"
+    Si $X$ es una variable aleatoria con $f_X(x) = 0$ para $x < 0$, entonces $X$ es llamada una variable aleatoria no-negativa, para la cual aplica la desigualdad de Markov:
 
+    $$
+    P(X \geq \epsilon) \leq \frac{E[X]}{\epsilon}
+    $$
 
-Si $X$ es una \va~ con $f_X(x) = 0$ para $x < 0$, entonces $X$ es llamada una \va~ no-negativa, para la cual aplica la desigualdad de Markov:
-
-$$
-P(X \geq \epsilon) \leq \frac{E[X]}{\epsilon}
-$$
 
 **Comentario**: En contraste con el límite de Chebyshev, que involucra tanto la media como la varianza, este límite requiere únicamente de la media de $X$.
 
@@ -122,9 +117,9 @@ $$
 
 ---
 
-### **Ejemplo de los resistores de baja calidad**
+### **Ejemplo de los resistores de baja calidad I**
 
-#### **Planteamiento**
+
 
 Es posible asumir que en la manufactura de resistores eléctricos de baja calidad de 1000 $\Omega$, la resistencia promedio es en efecto de 1000 $\Omega$, según se determina por un análisis estadístico de mediciones, pero hay una gran variación alrededor de este valor. Si todos los resistores por encima de 1500 $\Omega$ deben descartarse, ¿cuál es la fracción máxima de resistores que terminarían por fuera?
 
@@ -135,6 +130,7 @@ $$
 
 ---
 
+### **Ejemplo de los resistores de baja calidad II**
 En este problema tenemos una distribución no-negativa (no hay valores negativos de resistencia eléctrica), y disponemos únicamente de la media y no de la varianza de la distribución, entonces aplica la desigualdad de Markov.
 
 $$
@@ -147,6 +143,8 @@ Es posible, aun así, que la proporción de resistencias descartadas sea menor. 
 
 
 ### **Ley de los grandes números**
+---
+### **Ley de los grandes números I**
 
 Sea $\{X_i\}_{i=1}^N$ una muestra aleatoria. Los $X_i$ son variables aleatorias idénticamente distribuidas e independientes \iid~ con media común $\mu$ y varianza $\sigma^2$. Se espera intuitivamente que la media de la muestra, $\overline{X_N},$ debería ser cercana a la media de la población $\mu$ para $N$ grande. Esto es
 
@@ -157,7 +155,7 @@ $$
 donde $S_N = X_1 + \ldots + X_N$ es la suma. 
 
 ---
-
+### **Ley de los grandes números II**
 Sea $\epsilon > 0$ un número fijo. Por la independencia de la secuencia $X_1, \ldots, X_N$ en la muestra aleatoria, se cumple que:
 
 $$
@@ -186,20 +184,21 @@ Para $N \rightarrow \infty$ la cota de la derecha en la última ecuación tiende
 
 ### **Ley de los grandes números — Definición**
 
+!!! tip "Ley de los grandes números"
+    Sea $\left\{ X_i \right\}_{i=1}^{N}$ una muestra aleatoria con media común $\mu$ y varianza $\sigma^2$. Sea
 
-Sea $\left\{ X_i\right\}_{i=1}^{N}$ una muestra aleatoria con media común $\mu$ y varianza $\sigma^2$. Sea
+    $$
+    S_N = X_1 + \cdots + X_N
+    $$
 
-$$
-S_N = X_1 + \cdots + X_N  
-$$
+    Entonces
 
-Entonces
+    $$
+    P\left( \left| \frac{S_N}{N} - \mu \right| \geq \epsilon \right) \to 0
+    $$
 
-$$
-P\left( \left\vert \frac{S_N}{N} - \mu \right\vert \geq \epsilon \right) \rightarrow 0
-$$
+    conforme $N \to \infty$ para cualquier $\epsilon > 0$.
 
-conforme $N \rightarrow \infty$ para cualquier $\epsilon > 0$.
 
 ---
 
