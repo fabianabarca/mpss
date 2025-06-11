@@ -87,9 +87,9 @@ Y el número promedio de clientes en una fila (cuando el servidor está ocupado)
 L_q = \frac{\lambda^2}{\nu(\nu - \lambda)} = \frac{\rho^2}{1 - \rho}
 \end{equation}
 
-### Ejemplos de un servidor web
-
-!!! example ""
+  :material-pencil-box: EJEMPLO
+    
+!!! example "Servidor web"
 
     Un servidor web es modelado como un sistema M/M/1 con una tasa de arribo de 2 solicitudes por minuto.  
     Se desea tener 3 solicitudes o menos en fila (más una que está siendo atendida) el 99% del tiempo.  
@@ -109,19 +109,21 @@ De los datos del problema: $\lambda = 2$. Para tener una fila de 3 o menos clien
 P(5 \text{ o más clientes en el sistema}) = \rho^5 = \left( \frac{\lambda}{\nu} \right)^5 \leq 0.01
 \end{equation}
 
-\begin{equation}
-\nu^5 \geq \frac{\lambda^5}{0.01} = \frac{2^5}{0.01} = 3200 \quad \Rightarrow \nu \geq 5.024
-\end{equation}
+!!! note "Cantidad de solicitudes por minuto para garantizar hasta 3 personas en la fila"
+
+    \begin{equation}
+    \nu^5 \geq \frac{\lambda^5}{0.01} = \frac{2^5}{0.01} = 3200 \quad \Rightarrow \nu \geq 5.024
+    \end{equation}
 
 
 ## Teorema del límite
 
 Suponga las siguientes condiciones para el proceso de nacimiento y muerte:
 
-1️⃣ $p_0 = 1$  
-2️⃣ $0 < p_i < 1$ para $i = 1, 2, \dots$  
-3️⃣ $q_N = 1$ si $S = \{0, 1, 2, \dots, N\}$  
-4️⃣ $\Omega_i > 0$ para $i \in S$
+1.  $p_0 = 1$  
+2.  $0 < p_i < 1$ para $i = 1, 2, \dots$  
+3.  $q_N = 1$ si $S = \{0, 1, 2, \dots, N\}$  
+4.  $\Omega_i > 0$ para $i \in S$
 
 Suponga que $\phi$ es un vector de probabilidad que satisface:
 
@@ -133,7 +135,7 @@ para i = 1,2,...
 
 Entonces:
 
-1️⃣ Dado cualquier vector de probabilidad inicial $\rho$,
+1.  Dado cualquier vector de probabilidad inicial $\rho$,
 
 \begin{equation}
 P(X_t = i \mid \text{vector inicial } \rho) \to \phi_i
@@ -141,7 +143,7 @@ P(X_t = i \mid \text{vector inicial } \rho) \to \phi_i
 
 cuando $t \rightarrow \infty$ para cada $i \in S$.
 
-2️⃣ Si el vector de probabilidad inicial es $\rho$ = $\phi$, entonces
+2.  Si el vector de probabilidad inicial es $\rho$ = $\phi$, entonces
 
 \begin{equation}
 P(X_t = i \mid \text{vector inicial } \phi) = \phi_i 
@@ -149,20 +151,20 @@ P(X_t = i \mid \text{vector inicial } \phi) = \phi_i
 
 para todo $t \geq 0$ para $i \in S$.
 
-**Primer resultado**
+Primer resultado
 Sin importar el estado inicial en el tiempo $t = 0$, el proceso se hallará en el estado $i$ con probabilidad $\phi_i$ conforme $t$ se hace grande.
 
-**Segundo resultado**
+Segundo resultado
 Si $\phi$ se usa como el vector inicial de probabilidad, entonces $\phi$ será el vector de probabilidad para todo tiempo $t \geq 0$.
 
 Las condiciones del teorema sobre $\Omega_i, p_i, q_i$ son esenciales: ningún estado es absorbente y cualquier estado puede alcanzarse desde cualquier otro estado.
 
 ### Videos y referencias en internet
 
-- **¿Qué es una cadena de Markov?**
+- ¿Qué es una cadena de Markov?
 
   Luis Rincón  [https://youtu.be/Trf9P7DnOHQ](https://youtu.be/Trf9P7DnOHQ)
 
-- **Origin of Markov chains | Journey into information theory | Computer Science**
+- Origin of Markov chains | Journey into information theory | Computer Science
 
   Khan Academy Labs  [https://youtu.be/Ws63I3F7Moc](https://youtu.be/Ws63I3F7Moc)
