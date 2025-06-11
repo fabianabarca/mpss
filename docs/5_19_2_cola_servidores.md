@@ -1,10 +1,3 @@
-### Presentación
-
-[19 - Vector de probabilidad de estado estable](https://www.overleaf.com/read/cpfydpqvyxzs#8095ae)
-
-### Secciones
-
-
 ## Cola de un solo servidor 
 
 :material-pencil-box: **EJEMPLO**
