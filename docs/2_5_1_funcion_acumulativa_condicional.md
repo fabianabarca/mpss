@@ -1,18 +1,22 @@
 
-
 # Función acumulativa condicional I
 
-Sea \( A \) el evento \( \{X \leq x\} \) de la variable aleatoria \( X \). La probabilidad \( P(X \leq x \mid B) \) se define como la *función acumulativa condicional* de \( X \), que se denota \( F_X(x \mid B) \),
+!!! tip "Definición: Función acumulativa condicional"
 
-\[
-P(A \mid B) = P(X \leq x \mid B) \triangleq F_X(x \mid B) \tag{1}
-\]
+    Sea \( A \) el evento \( \{X \leq x\} \) de la variable aleatoria \( X \).  
+    La probabilidad \( P(X \leq x \mid B) \) se define como la *función acumulativa condicional* de \( X \), que se denota \( F_X(x \mid B) \):
 
-\[
-F_X(x \mid B) = \frac{P\left[(X \leq x) \cap B\right]}{P(B)} = \frac{P(A \cap B)}{P(B)} = P(A \mid B) \tag{2}
-\]
+    \[
+    P(A \mid B) = P(X \leq x \mid B) \triangleq F_X(x \mid B) \tag{1}
+    \]
 
-Aplicable a variables aleatorias discretas, continuas o mixtas.
+    \[
+    F_X(x \mid B) = \frac{P\left[(X \leq x) \cap B\right]}{P(B)} = \frac{P(A \cap B)}{P(B)} = P(A \mid B) \tag{2}
+    \]
+
+    Aplicable a variables aleatorias discretas, continuas o mixtas.
+
+
 
 
 
@@ -35,30 +39,30 @@ El evento conjunto \( \{X \leq x\} \cap B \) consiste de los resultados \( s \) 
 
 
 ---
-
 # Propiedades de la función acumulativa condicional
 
-Todas las propiedades de las funciones acumulativas ordinarias se aplican a \( F_X(x \mid B) \):
+!!! tip "Propiedades de la función acumulativa condicional"
+    Todas las propiedades de las funciones acumulativas ordinarias se aplican a \( F_X(x \mid B) \):
 
-1️⃣ Similar a \( P(\emptyset) = 0 \):  
-  \( F_X(-\infty \mid B) = 0 \)
+    1️⃣ Similar a \( P(\emptyset) = 0 \):  
+      \( F_X(-\infty \mid B) = 0 \)
 
-2️⃣ Similar a \( P(S) = 1 \):  
-  \( F_X(\infty \mid B) = 1 \)
+    2️⃣ Similar a \( P(S) = 1 \):  
+      \( F_X(\infty \mid B) = 1 \)
 
-3️⃣ Es una probabilidad:  
-  \( 0 \leq F_X(x \mid B) \leq 1 \)
+    3️⃣ Es una probabilidad:  
+      \( 0 \leq F_X(x \mid B) \leq 1 \)
 
-4️⃣ Es no decreciente:  
-  \( F_X(x_1 \mid B) \leq F_X(x_2 \mid B) \) si \( x_1 < x_2 \)
+    4️⃣ Es no decreciente:  
+      \( F_X(x_1 \mid B) \leq F_X(x_2 \mid B) \) si \( x_1 < x_2 \)
 
-5️⃣ Probabilidad de un segmento:  
-\[
-P\{x_1 < X \leq x_2 \mid B\} = F_X(x_2 \mid B) - F_X(x_1 \mid B)
-\]
+    5️⃣ Probabilidad de un segmento:  
+    \[
+    P\{x_1 < X \leq x_2 \mid B\} = F_X(x_2 \mid B) - F_X(x_1 \mid B)
+    \]
 
-6️⃣ Continuidad por la derecha:  
-  \( F_X(x^+ \mid B) = F_X(x \mid B) \)
+    6️⃣ Continuidad por la derecha:  
+      \( F_X(x^+ \mid B) = F_X(x \mid B) \)
 
 ---
 
@@ -70,39 +74,48 @@ Si solo existen los resultados elementales \( B = \{b_1, b_2, b_3\} \) entonces 
 
 ---
 
-# Ejemplo de tres lanzamientos de monedas I
+---
 
-> Considere el experimento de tres lanzamientos de moneda (o el lanzamiento de tres monedas, que es equivalente porque son eventos independientes). Sea la *va* \( X \) “el número total de coronas” y sea el evento \( B = \{\text{más coronas que escudos}\} \).  
-> Determine y esboce \( F_X(x \mid B) \).
+:material-pencil-box: **EJEMPLO**
 
-El lanzamiento de monedas tiene ocho resultados distintos \( (2^3) \). El evento \( B \) es:
+!!! example "Ejemplo de tres lanzamientos de monedas I"
+    Considere el experimento de tres lanzamientos de moneda (o el lanzamiento de tres monedas, que es equivalente porque son eventos independientes). Sea la *va* \( X \) “el número total de coronas” y sea el evento \( B = \{\text{más coronas que escudos}\} \).  
+    Determine y esboce \( F_X(x \mid B) \).
 
-\[
-B = \{\text{CCC, CCE, CEC, ECC}\}
-\]
+    El lanzamiento de monedas tiene ocho resultados distintos \( (2^3) \). El evento \( B \) es:
 
-con \( P(B) = \frac{1}{2} \)
+    \[
+    B = \{\text{CCC, CCE, CEC, ECC}\}
+    \]
 
+    con \( P(B) = \frac{1}{2} \)
+
+---
 
 
 ---
 
-# Ejemplo de tres lanzamientos de monedas II
+---
 
-Considere el evento conjunto \( \{X \leq x\} \cap B \) y la definición
+:material-pencil-box: **EJEMPLO**
 
-\[
-F_X(x \mid B) = \frac{P(\{X \leq x\} \cap B)}{P(B)}
-\]
+!!! example "Ejemplo de tres lanzamientos de monedas II"
+    Considere el evento conjunto \( \{X \leq x\} \cap B \) y la definición
 
-Si \( X \) es “el número total de coronas” y \( B = \{\text{más coronas que escudos}\} \), entonces:
+    \[
+    F_X(x \mid B) = \frac{P(\{X \leq x\} \cap B)}{P(B)}
+    \]
 
-| \( x \) | \( \{X \leq x\} \cap B \)                            | \( P(\{X \leq x\} \cap B) \) | \( F_{X \mid B} \) |
-|--------|------------------------------------------------------|------------------------------|--------------------|
-| 0      | \( \{\text{EEE}\} \cap B = \emptyset \)              | 0                            | 0                  |
-| 1      | \( \{\text{CEE, ECE, EEC, EEE}\} \cap B = \emptyset \) | 0                            | 0                  |
-| 2      | \( \{\text{CCE, CEC, ECC}\} \)                        | 3/8                          | 3/4                |
-| 3      | \( \{\text{CCC, CCE, CEC, ECC}\} = B \)               | 4/8                          | 1                  |
+    Si \( X \) es “el número total de coronas” y \( B = \{\text{más coronas que escudos}\} \), entonces:
+
+    | \( x \) | \( \{X \leq x\} \cap B \)                            | \( P(\{X \leq x\} \cap B) \) | \( F_{X \mid B} \) |
+    |--------|------------------------------------------------------|------------------------------|--------------------|
+    | 0      | \( \{\text{EEE}\} \cap B = \emptyset \)              | 0                            | 0                  |
+    | 1      | \( \{\text{CEE, ECE, EEC, EEE}\} \cap B = \emptyset \) | 0                            | 0                  |
+    | 2      | \( \{\text{CCE, CEC, ECC}\} \)                        | 3/8                          | 3/4                |
+    | 3      | \( \{\text{CCC, CCE, CEC, ECC}\} = B \)               | 4/8                          | 1                  |
+
+---
 
 ---
 
