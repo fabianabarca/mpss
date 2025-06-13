@@ -34,7 +34,7 @@ O sea, las probabilidades de transición de $t$ pasos dependen solamente de la d
 
 Un algoritmo general se necesita para hallar la matriz de transición $\Pi^{t}$ de orden $t$ para cualquier matriz $\Pi$ de una cadena de Markov dada.
 
-![Cadena de Markov de tiempo discreto](images/20_cadena_markov_discreta.svg.png)
+![Cadena de Markov de tiempo discreto](images/20_cadena_markov_discreta.svg)
 
 Para hallar la matriz de transición de orden $t+1$ a partir de la de orden $t$, se usan las suposiciones de Markov básicas.
 
