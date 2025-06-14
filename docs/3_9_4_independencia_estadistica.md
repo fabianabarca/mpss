@@ -67,7 +67,7 @@ Lo mismo sucede con $F_{Y}(y| X\leq x)$. Además, si se mantiene la misma condic
     \end{cases}
     \end{equation}
 
-    ![Gráfica de la función de densidad conjunta](images\9_pdf_bivariada_2.svg)
+    ![Gráfica de la función de densidad conjunta](images/9_pdf_bivariada_2.svg)
 
 
 Las densidades marginales se encuentran con las ecuaciones:
