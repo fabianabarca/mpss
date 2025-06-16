@@ -1,14 +1,7 @@
-### Presentación
-
-[2 - Probabilidad conjunta, condicional y teorema de bayes](https://www.overleaf.com/read/mpzrvppyvszr#9c9c90)
-
-### Secciones
-- Teorema de Bayes (16 - 32)
-
 # Teorema de Bayes
 
 
-!!! abstract Introducción
+!!! abstract "Introducción"
 
     Como uno de los resultados más útiles de la teoría de probabilidad, el teorema de Bayes permite *actualizar* el conocimiento o *recalcular* la probabilidad de un evento de interés cuando encontramos nueva evidencia de su ocurrencia.
 
@@ -35,13 +28,9 @@ Del álgebra de conjuntos se sabe que $P(B \cap A) = P(A \cap B)$, y es posible 
 
 
 
-!!! Success Regla de la probabilidad condicional inversa:
-    $$
-    P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}
-    $$
+!!! note "Regla de la probabilidad condicional inversa"
 
-
-
+    $$P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$$
 
 
 
@@ -58,7 +47,7 @@ donde $\{ A_n \}$ es una partición universal para $n = 1, 2, \ldots, N$.
 !!! tip ""
     Una intuición importante de esta ecuación es que la ocurrencia de $B$ puede deberse a múltiples factores (en este caso, cualquiera entre $A_1,\ldots,A_N$), pero estamos interesados en la *relación* con **uno** de ellos en particular, $A_n$.
 
-!!! note Nota
+!!! note "Nota"
     Esta *relación* puede, o no, ser de **causalidad**.
 
 ### Definiciones:
@@ -74,7 +63,7 @@ donde $\{ A_n \}$ es una partición universal para $n = 1, 2, \ldots, N$.
 
 ---
 
-!!! example **Ejemplo de incidencia de una enfermedad poco común**
+!!! example "**Ejemplo de incidencia de una enfermedad poco común**"
 
     Se ha desarrollado un examen de diagnóstico para una enfermedad extraña que afecta solo a 1 de cada 1000 adultos. En análisis estadísticos médicos de clasificación binaria (*sí o no*) se define:
 
@@ -83,7 +72,8 @@ donde $\{ A_n \}$ es una partición universal para $n = 1, 2, \ldots, N$.
     
     - **Especificidad**: Un individuo sin la enfermedad dará resultado negativo 98 \% de las veces (también llamada *tasa negativa verdadera*). Un resultado contrario es un **falso positivo**.
 
-    !!! Question ¿Cuál es la probabilidad de que el paciente sí tenga la enfermedad si el diagnóstico es positivo?
+    !!! Question "¿Cuál es la probabilidad de que el paciente sí tenga la enfermedad si el diagnóstico es positivo?"
+
 ### Cálculo con el Teorema de Bayes:
 
 
@@ -105,7 +95,7 @@ $$
 
     La probabilidad de que el paciente **sí tenga la enfermedad** es del **5 %**… a pesar de que el resultado del examen fue positivo.
 
-!!! question ¿Por qué es tan baja esta probabilidad, con una _sensibilidad_ de la prueba del 99 %?
+!!! question "¿Por qué es tan baja esta probabilidad, con una _sensibilidad_ de la prueba del 99 %?"
 
 ---
 
@@ -123,14 +113,14 @@ $$
 
 ---
 
-!!! example **Ejemplo del apagón en el sistema eléctrico**
+!!! example "**Ejemplo del apagón en el sistema eléctrico**"
 
     Un barrio de Heredia experimenta un apagón. Una ingeniera de operación y mantenimiento de ESPH está cerca de ahí e inmediatamente sospecha de cuatro orígenes de la falla: ($A_1$) en la línea de transmisión Colima - Heredia, ($A_2$) en el transformador de la subestación de Heredia, ($A_3$) en la línea de distribución hacia San Pablo o en ($A_4$) el transformador del poste.
 
 
     > Sabe la ingeniera que ante una falla en el transformador de subestación siempre habrá una desconexión permanente. ¿Cuál es la probabilidad de que la causa de la desconexión permanente haya sido una falla en ($A_2$) el trafo de subestación?
     
-    !!! note Nota
+    !!! note "Nota"
         Las protecciones del sistema eléctrico ejecutan dos operaciones ante una falla: o ($B$) una desconexión permanente o ($\overline{B}$) un "recierre" luego de un tiempo prudencial si la falla ha desaparecido.
 
 
@@ -154,7 +144,7 @@ Para encontrar la probabilidad de cada falla, analizamos su frecuencia relativa 
 - $P(A_4) = 8/30 = 0.2666$
 
 
-Sean $B = \{ \text{desconexión permanente} \}$ y $ \overline{B} = \{ \text{recierre} \}$. La probabilidad que buscamos es una proporción entre el evento de interés y todas las posibilidades juntas:
+Sean $B = \{ \text{desconexión permanente} \}$ y $\overline{B} = \{ \text{recierre} \}$. La probabilidad que buscamos es una proporción entre el evento de interés y todas las posibilidades juntas:
 
 
 
@@ -199,12 +189,12 @@ que representa una probabilidad quizá más baja de lo esperado. A pesar de que 
 
 ---
 
-!!! example **Ejemplo de los distribuidores de jocotes**
+!!! example "**Ejemplo de los distribuidores de jocotes**"
 
 
     Tres distribuidores de frutas, $A$, $B$ y $C$, entregan jocotes a un supermercado. Un día la inspección de producto encuentra, con cierto alborozo, una "guápil" (dos jocotes que nacieron juntos) en un contenedor donde están todos los jocotes de todos los distribuidores, revueltos e indistinguibles entre sí. En este lote de producto, $A$ entregó (aproximadamente) 800 jocotes, $B$ 700 y $C$ 500. En estudios previos se ha determinado que la incidencia de guápiles en cada distribuidora es del 1\% en $A$, del 2\% en $B$ y del 5\% en $C$. 
 
-    !!! question ¿Cuál es la probabilidad de encontrar una guápil? Si una guápil es encontrada, ¿cuál es la probabilidad de que vino de $C$?
+    !!! question "¿Cuál es la probabilidad de encontrar una guápil? Si una guápil es encontrada, ¿cuál es la probabilidad de que vino de $C$?"
 
 
 Sean $P(A)$, $P(B)$ y $P(C)$ las probabilidades de encontrar un jocote de los distribuidores $A$, $B$ y $C$, respectivamente. No son equiprobables, sino que están obtenidas por frecuencia relativa de la forma:
@@ -234,7 +224,7 @@ La probabilidad condicional inversa de que si una guápil fue encontrada esta vi
     $$
     \begin{aligned}
     P(C \mid G) &= \frac{P(C) \cdot P(G \mid C)}{P(G)} \\
-                &= \frac{\mathbf{P(C)} \cdot \mathbf{P(G \mid C)}}{P(A) \cdot P(G \mid A) + P(B) \cdot P(G \mid B) + \mathbf{P(C)} \cdot \mathbf{P(G \mid C)}} \\
+                &= \frac{{P(C)} \cdot {P(G \mid C)}}{P(A) \cdot P(G \mid A) + P(B) \cdot P(G \mid B) + {P(C)} \cdot {P(G \mid C)}} \\
                 &= \frac{0.25 \cdot 0.05}{0.0235} = 0.5319 = 53.2\%
     \end{aligned}
     $$
