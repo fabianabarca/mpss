@@ -1,4 +1,3 @@
-
 ## Propiedades de la densidad espectral de potencia
 
 - La densidad es siempre positiva  
@@ -44,7 +43,7 @@
 ## Ecuaciones de Wiener–Khinchin  
 Relación entre el espectro de densidad de potencia y la correlación
 
-!!! note "" 
+!!! tip "" 
     **Teorema de Wiener–Khinchin**
 
     Para un proceso \(X(t)\) estacionario en sentido amplio (*WSS*), donde \(A[R_{XX}(t,t+\tau)] = R_{XX}(\tau)\), la relación entre el espectro de densidad de potencia y la correlación está dada por:
@@ -63,20 +62,22 @@ Relación entre el espectro de densidad de potencia y la correlación
 
 ## Espectro de potencia a partir de la función de autocorrelación
 
+:material-pencil-box: **EJEMPLO**
+
+!!! example "Espectro de potencia a partir de la función de autocorrelación "
 
 !!! note "" 
-    **¿Cuál es el espectro de potencia para el proceso aleatorio** \( X(t) \) **con la siguiente autocorrelación?**
+    **¿Cuál es el espectro de potencia para el proceso aleatorio**  X(t)  **con la siguiente autocorrelación?**
 
     \[
     R_{XX}(\tau) = \left( \frac{A^2}{2} \right) \cos(\omega_0 \tau)
     \]
 
+    ![Función de autocorrelación cosenoidal del proceso aleatorio \( X(t) \)](images/15_autocorrelacion_sin.svg)
+    
+    La figura anterior muestra el comportamiento de la función de autocorrelación \( R_{XX}(\tau) \), la cual es una función cosenoidal centrada en el origen. Esta función describe cómo se correlacionan los valores del proceso \( X(t) \) en distintos retardos \( \tau \).
 
-![Función de autocorrelación cosenoidal del proceso aleatorio \( X(t) \)](images/15_autocorrelacion_sin.svg)
 
-La figura anterior muestra el comportamiento de la función de autocorrelación \( R_{XX}(\tau) \), la cual es una función cosenoidal centrada en el origen. Esta función describe cómo se correlacionan los valores del proceso \( X(t) \) en distintos retardos \( \tau \).
-
----
 
 \[
 \begin{aligned}
@@ -121,7 +122,7 @@ Cuando \( \text{SPL} = L_p = 0 \, \text{dB} \), la intensidad del sonido es igua
 
 ## Ruido blanco
 
-!!! note "" 
+!!! tip "" 
      **Ruido blanco**  
      Una función muestra \( n(t) \) de un proceso aleatorio \( N(t) \) de ruido estacionario en sentido amplio, se llama *ruido blanco* si el espectro de densidad de potencia de \( N(t) \) es una constante en todas las frecuencias.
 
@@ -227,16 +228,18 @@ Por analogía con la luz coloreada (que contiene solo una parte del espectro de 
 
 ---
 
-## Espectro de potencia de una señal de ruido
+:material-pencil-box: **EJEMPLO**
 
-!!! note "" 
-     Un proceso \( N(t) \) de ruido **wss** tiene una autocorrelación dada por:
+!!! example "Espectro de potencia de una señal de ruido"
+
+!!! note ""
+    Un proceso N(t) de ruido **wss** tiene una autocorrelación dada por:
 
     \[
     R_{NN}(\tau) = P e^{-3|\tau|}
     \]
 
-     donde \( P \) es una constante. Se desea encontrar su espectro de densidad de potencia.
+    donde P es una constante. Se desea encontrar su espectro de densidad de potencia.
 
 
 
