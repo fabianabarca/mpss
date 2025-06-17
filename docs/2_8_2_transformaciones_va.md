@@ -1,3 +1,5 @@
+Las transformaciones permiten determinar la función de densidad probabilística de una variable aleatoria $Y$ a partir del conocimiento de otra VA $X$, relacionadas por la **función** $Y = T(X) = g(X)$. Es común en situaciones donde el resultado de un proceso o la salida de un sistema depende de una entrada aleatoria.
+
 ## Transformaciones de una variable aleatoria I
 
 !!! tip "Problema a resolver"
@@ -14,14 +16,19 @@
 
 ## Transformaciones de una variable aleatoria II
 
- **faltan figuras en directorio**
+|                           |                           |                             |
+|---------------------------|---------------------------|-----------------------------|
+| ![Uniforme](images/8_Distribucion_Uniforme.svg) | ![Caja](images/8_Caja_de_transformacion.svg) | ![Resultante](images/8_Distribucion_Resultante.svg) |
+
 
 ## Tipos de transformaciones
 
 !!! note ""
 
-   **X (la "entrada")** puede ser discreta, continua o mixta.  
-   **T (la transformación)** puede ser lineal, no lineal, segmentada, monotónica, no monotónica...
+    **X (la "entrada")** puede ser discreta, continua o mixta. 
+
+    **T (la transformación)** puede ser lineal, no lineal, segmentada, monotónica, no monotónica...
+
 
 Hay muchas combinaciones, pero se considerarán tres casos:
 
@@ -39,22 +46,21 @@ Hay muchas combinaciones, pero se considerarán tres casos:
 
 !!! note ""
 
-   Una transformación o función $T$ es *monotónicamente creciente* en un intervalo si 
+    Una transformación o función $T$ es *monotónicamente creciente* en un intervalo si
 
-   \begin{equation}
-   T(x_1) < T(x_2) \quad \text{para cualquier} \quad x_1 < x_2
-   \end{equation}
+    $$ T(x_1) < T(x_2) \quad \text{para cualquier} \quad x_1 < x_2 $$
 
 
 **Transformaciones crecientes**
 
-Supóngase que $T$ es continua y diferenciable en todo valor de $x$ para el que $f_{X}(x) \neq 0$ (es decir, donde $X$ tiene *soporte*). Para un valor $x_0$ cualquiera en el intervalo se cumple que
+Supóngase que $T$ es continua y diferenciable en todo valor de $x$ para el que $f_X(x) \neq 0$ (es decir, donde $X$ tiene *soporte*). Para un valor $x_0$ cualquiera en el intervalo se cumple que
 
 \begin{equation}
-y_0 = T(x_0) \qquad \text{y} \qquad x_0 = T^{-1}(y_0)
+y_0 = T(x_0) \quad \text{y} \quad x_0 = T^{-1}(y_0)
 \end{equation}
 
 donde $T^{-1}$ representa el inverso de la transformación $T$.
+
 
 ## Transformaciones monotónicas de una VA continua III
 
@@ -62,7 +68,8 @@ donde $T^{-1}$ representa el inverso de la transformación $T$.
 
 !!! note ""
 
-  La probabilidad del evento $ \{Y \leq y_0\} $ debe igualar la probabilidad del evento $ \{ X \leq x_0\} $ debido a la correspondencia entre $X$ e $Y$.
+    La probabilidad del evento \( \{Y \leq y_0\} \) debe igualar la probabilidad del evento \( \{X \leq x_0\} \) debido a la correspondencia entre \(X\) e \(Y\).
+
 
 Así entonces, debe cumplirse que
 
@@ -101,9 +108,10 @@ En nuestro escenario, y considerando que el límite inferior de $f_X(x)$ es $T^{
 
 \begin{multline}
   f_Y(y_0) = f_X\left[ T^{-1}(y_0), y_0 \right] \frac{\mathrm{d} T^{-1}(y_0)}{\mathrm{d} y_0} \\  
-  - f_X\left[T^{-1}(y_a), y_0\right] \cancelto{0}{\frac{\mathrm{d} T^{-1}(y_a)}{\mathrm{d} y}}  
-  + \int_{T^{-1}(y_a)}^{T^{-1}(y_0)} \cancelto{0}{\frac{\partial f_X(x)}{\partial y}} \mathrm{d} x
+  - f_X\left[T^{-1}(y_a), y_0\right] \left(\frac{\mathrm{d} T^{-1}(y_a)}{\mathrm{d} y} = 0\right)   
+  + \int_{T^{-1}(y_a)}^{T^{-1}(y_0)} \left(\frac{\partial f_X(x)}{\partial y} = 0\right) \mathrm{d} x
 \end{multline}
+
 
 ## Transformación monotónica creciente  I
 
@@ -133,11 +141,11 @@ que es la función de densidad buscada de $Y$, en términos de la transformació
 **Tranformación monotónica decreciente**
 
 !!! note ""
-   Una transformación o función $T$ es *monotónicamente decreciente* en un intervalo si  
 
-   \begin{equation}
-   T(x_1) > T(x_2) \quad \text{para cualquier} \quad x_1 < x_2
-   \end{equation}
+    Una transformación o función $T$ es *monotónicamente decreciente* en un intervalo si  
+
+    $$ T(x_1) > T(x_2) \quad \text{para cualquier} \quad x_1 < x_2 $$
+
 
 Si se considera el caso de la transformación decreciente, se escribe:
 
@@ -169,9 +177,8 @@ Dado que la pendiente de $T^{-1}(y)$ es negativa pues la función es decreciente
 ## Teorema de transformación monotónica II
 
 !!! note "Notación alternativa del teorema de transformación"
-    En ocasiones se utiliza la notación $$Y = g(X)$$ para la transformación, y $$X = h(Y)$$ como la transformación inversa. El teorema se enuncia entonces como
+    En ocasiones se utiliza la notación \( Y = g(X) \) para la transformación, y \( X = h(Y) \) como la transformación inversa. El teorema se enuncia entonces como
 
     \begin{equation}
     f_Y(y) = f_X\left[ h(y) \right] \left\vert \frac{\mathrm{d} h(y)}{\mathrm{d} y} \right\vert
     \end{equation}
-
