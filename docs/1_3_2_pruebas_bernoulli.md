@@ -13,9 +13,9 @@ Un tipo de experimento en el que solo hay **dos resultados posibles** en cualqui
 - Los eventos elementales son estadísticamente independientes. 
 
 - El evento $A$ ocurre en cualquier ensayo con probabilidad:
-```math
+$$
 \boxed{P(A) = p}
-```
+$$
 
 - El evento $\overline{A}$ entonces tiene la probabilidad complementaria:
 
@@ -26,7 +26,7 @@ Un tipo de experimento en el que solo hay **dos resultados posibles** en cualqui
 ## Pruebas de Bernoulli o pruebas repetidas II.
 
 
-- Ejemplo: después de $ N $ ensayos del experimento básico, una secuencia posible (de muchas) es el evento $ A $ ocurriendo $ k $ veces seguidas, seguido por el evento $\overline{A}$ ocurriendo $ N-k $ veces. Puesto que se asumió la independencia estadística de los ensayos, la probabilidad de esta secuencia particular es:
+- Ejemplo: después de $N$ ensayos del experimento básico, una secuencia posible (de muchas) es el evento $A$ ocurriendo $k$ veces seguidas, seguido por el evento $\overline{A}$ ocurriendo $N-k$ veces. Puesto que se asumió la independencia estadística de los ensayos, la probabilidad de esta secuencia particular es:
 
 $$
 \begin{aligned}
@@ -35,11 +35,11 @@ $$
 \end{aligned}
 $$
 
-- Hay otras secuencias que dan $ k $ eventos $ A $ y $ N-k $ eventos $\overline{A}$. Por la independencia estadística, la *probabilidad* de cada una de estas *secuencias* es la misma.
+- Hay otras secuencias que dan $k$ eventos $A$ y $N-k$ eventos $\overline{A}$. Por la independencia estadística, la *probabilidad* de cada una de estas *secuencias* es la misma.
 ---
 ## Pruebas de Bernoulli o pruebas repetidas III.
 
-- Del análisis combinatorio, el número de maneras de tomar $ k $ objetos de una colección de $ N $ objetos es:
+- Del análisis combinatorio, el número de maneras de tomar $k$ objetos de una colección de $N$ objetos es:
 
 $$
 \binom{N}{k} = \frac{N!}{k!(N-k)!} = \complement_{k}^{N} = {}_N\mathrm{C}_k
@@ -112,7 +112,7 @@ $$
 }
 $$
 
-Aplica para $ N $, $ k $, $ (N-k) $ grandes, $ k $ cerca de $ Np $ tales que sus desviaciones de $ Np $ (más arriba o más abajo) son pequeñas en magnitud relativas tanto a $ Np $ como a $ N(1-p) $.
+Aplica para $N$, $k$, $(N-k)$ grandes, $k$ cerca de $Np$ tales que sus desviaciones de $Np$ (más arriba o más abajo) son pequeñas en magnitud relativas tanto a $Np$ como a $N(1-p)$.
 
 ---
 
@@ -121,9 +121,9 @@ Aplica para $ N $, $ k $, $ (N-k) $ grandes, $ k $ cerca de $ Np $ tales que sus
 
 Esta aproximación es más sencilla de evaluar, pero tiene algunas restricciones adicionales. Si se cumple que:
 
-- $ k $ es pequeño  
-- $ N $ y por tanto $ (N-k) $ son grandes  
-- $ p \ll 1 $ y además $ Np = \lambda \approx 1 $
+- $k$ es pequeño  
+- $N$ y por tanto $(N-k)$ son grandes  
+- $p\ll 1$ y además $Np = \lambda \approx 1$
 
 Entonces la expresión a continuación es una aproximación de la prueba de Bernoulli,
 
@@ -153,14 +153,11 @@ $$
 !!! example "Ejemplo de transmisión binaria de datos y errores I"
     Un dato binario (0 o 1) se envía por una línea de transmisión con una probabilidad de error de 0.001. Si 1000 bits son enviados, ¿cuál es la probabilidad de que haya... 
 
-
-
-
 Verificar en este ejemplo que:
 
-- $ k $ es pequeño: $ k = 5 $  
-- $ N $ y $ (N-k) $ son grandes: $ N = 1000 $ y $ (N-k) = 995 $  
-- $ p \ll 1 $ y además $ Np = \lambda \approx 1 $, que son: $ p = 0.001 $ y $ Np = 1000 \cdot 0.001 = 1 $
+- $k$ es pequeño: $k = 5$  
+- $N$ y $(N-k)$ son grandes: $N = 1000$ y $(N-k) = 995$  
+- $p \ll 1$ y además $Np = \lambda \approx 1$, que son: $p = 0.001$ y $Np = 1000 \cdot 0.001 = 1$
 
 Entonces aplica la distribución de Poisson:
 
