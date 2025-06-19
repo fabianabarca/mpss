@@ -15,13 +15,63 @@ E[g(X, Y)] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y) \cdot f_{X,
 $$
 
 **Ejemplo:**  
-Si $X$ y $Y$ son independientes y uniformes en $[0,1]$, y $g(x,y) = x + y$, entonces:
+**Valor esperado de una función de variables aleatorias**
+
+El PDF conjunto de la cantidad \( X \) de almendras y la cantidad \( Y \) de semillas de marañón (y la cantidad \( Z \) de maní) en un tarro de 1 kg es:
+\[
+\begin{cases}
+0 \leq x \leq 1, \\
+0 \leq y \leq 1, \\
+x + y \leq 1,
+\end{cases}
+\]
+
+
 
 $$
-E[X + Y] = \int_0^1 \int_0^1 (x + y) \, \mathrm{d}x \, \mathrm{d}y = 1
+f_{X,Y}(x, y) = 24xy
 $$
 
-![Figura: valor esperado](https://raw.githubusercontent.com/nicoleMena/mpss/transcripcion_C14663/docs/images/valor-esperado-fig-1.svg)
+En cualquier otro caso:
+
+$$
+f_{X,Y}(x, y) = 0
+$$
+
+Si 1 kg de almendras le cuesta a la compañía ₡6000, un kilogramo de semillas de marañón son ₡10.000 y 1 kg de maní cuesta ₡3.500.  
+**¿Cuál es el costo esperado total del contenido del tarro?**
+Sea la función del costo
+
+$$
+h(X, Y) = 6000X + 10000Y + 3500(1 - X - Y)
+$$
+
+Entonces,
+
+$$
+E[h(X, Y)] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} h(x, y)\, f_{X,Y}(x, y) \, dx\, dy
+$$
+
+Se reduce a:
+
+$$
+E[h(X, Y)] = \int_0^1 \int_0^{1-x} \left[6000x + 10000y + 3500(1 - x - y)\right] 24xy\, dy\, dx
+$$
+
+$$
+= 7100
+$$
+
+que representa los costos esperados del contenido de la caja.
+
+
+
+
+
+
+
+
+
 
 # Sección 2: Momentos conjuntos alrededor del origen
 
@@ -40,13 +90,9 @@ Estos momentos permiten analizar características como la dispersión y forma co
 - $\mu'_{11} = E[XY]$: producto esperado
 
 **Ejemplo:**  
-Si $f_{X,Y}(x,y) = 4xy$ para $(x, y) \in [0,1] \times [0,1]$, entonces:
 
-$$
-\mu'_{11} = E[XY] = \int_0^1 \int_0^1 xy \cdot 4xy \, \mathrm{d}x \, \mathrm{d}y = \frac{4}{9}
-$$
+![Ejemplo: Gravedad](./images/10_gravedad.svg)
 
----
 
 # Sección 3: La correlación
 
@@ -81,10 +127,4 @@ donde $\sigma_X$ y $\sigma_Y$ son las desviaciones estándar de $X$ y $Y$.
 - $\rho_{X,Y} = 0$: sin correlación lineal
 
 **Ejemplo:**  
-Sea $X$ una variable uniforme en $[-1,1]$, y $Y = X^2$. Entonces:
 
-$$
-\text{Cov}(X, Y) = 0
-$$
-
-Pero $X$ y $Y$ no son independientes.
