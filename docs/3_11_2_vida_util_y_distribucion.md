@@ -1,6 +1,6 @@
 # Vida útil de un componente y su repuesto
 
-Sea $X_1$ una \textit{variable aleatoria} para el tiempo de vida de un componente. El componente puede sustituirse una única vez, y $X_2$ representa el tiempo de vida del repuesto. $X_1$ y $X_2$ son **iid** con distribución exponencial de parámetro $\lambda$. Por lo anterior, la PDF conjunta es
+Sea $X_1$ una VA para el tiempo de vida de un componente. El componente puede sustituirse una única vez, y $X_2$ representa el tiempo de vida del repuesto. $X_1$ y $X_2$ son **iid** con distribución exponencial de parámetro $\lambda$. Por lo anterior, la PDF conjunta es
 
 $$
 f_{X_1,X_2}(x_1,x_2) = \lambda^2 e^{-\lambda(x_1 + x_2)} \quad \text{para} \quad x_1 > 0, x_2 > 0
@@ -14,7 +14,10 @@ Podríamos estar interesados en dos cantidades (transformaciones arbitrarias $u_
 - La proporción de la vida del primer componente a la vida total del dispositivo $$Y_2 = u_2(X_1,X_2) = \frac{X_1}{X_1 + X_2}$$
 
 ## Planteamiento
-¿Cuál es la distribución conjunta de $Y_1$ y $Y_2$?
+
+```markdown
+    ¿Cuál es la distribución conjunta de $Y_1$ y $Y_2$?
+```
 
 Por el teorema de transformación, escrito como
 
@@ -34,10 +37,13 @@ En una transformación bivariada se cumple que
 $$
 J(y_1,y_2) \triangleq \mathsf{det}(\mathbf{M}) \triangleq \frac{\partial (v_1,v_2)}{\partial(y_1,y_2)} \triangleq \mathsf{det} 
 \begin{pmatrix}
-\frac{\partial v_1}{\partial y_1} & \frac{\partial v_1}{\partial y_2} \\$0.5em]
+\frac{\partial v_1}{\partial y_1} & \frac{\partial v_1}{\partial y_2} \\
 \frac{\partial v_2}{\partial y_1} & \frac{\partial v_2}{\partial y_2}
 \end{pmatrix}
 $$
+
+
+
 
 de donde, dados $v_1(y_1,y_2)$ y $v_2(y_1,y_2)$,
 
@@ -45,6 +51,7 @@ de donde, dados $v_1(y_1,y_2)$ y $v_2(y_1,y_2)$,
 - $\frac{\partial v_1}{\partial y_2} = y_1$
 - $\frac{\partial v_2}{\partial y_1} = (1-y_2)$
 - $\frac{\partial v_2}{\partial y_2} = -y_1$
+  
 y, por tanto,
 
 $$
@@ -68,7 +75,7 @@ donde se observa que no depende de $y_2$, y 1 está distribuido en $0 < y_2 < 1$
 
 Se observa además que
 
-- La distribución del tiempo de vida $X_1 + X_2$ se conoce como \textit{distribución gama}, con parámetros $\alpha = 2$ y $\beta = 2$.
+- La distribución del tiempo de vida $X_1 + X_2$ se conoce como *distribución gama*, con parámetros $\alpha = 2$ y $\beta = 2$.
 - La proporción del tiempo de vida del componente original es uniforme entre 0 y 1.
 - $Y_1$ y $Y_2$ son independientes entre sí.
 
@@ -88,13 +95,13 @@ Por tanto
 $$
 \vert J(z,w) \vert = \left\vert \mathrm{det} 
 \begin{pmatrix}
-\frac{\partial P}{\partial z} & \frac{\partial P}{\partial w} \\$0.5em]
+\frac{\partial P}{\partial z} & \frac{\partial P}{\partial w}\\
 \frac{\partial Q}{\partial z} & \frac{\partial Q}{\partial w}
 \end{pmatrix}
 \right\vert
 = \left\vert \mathrm{det} 
 \begin{pmatrix}
-\frac{1}{2} & \frac{1}{2} \\$0.5em]
+\frac{1}{2} & \frac{1}{2}\\
 \frac{1}{2} & -\frac{1}{2}
 \end{pmatrix}
 \right\vert
@@ -116,26 +123,26 @@ Z = X\cos \theta_0 + Y \sin \theta_0 \qquad
 W = X\sin \theta_0 - Y\cos \theta_0
 $$
 
+
 y así
 
-$$
-\begin{aligned}
-X &= Z\cos \theta_0 + W \sin \theta_0 \triangleq P(Z,W) \\
-Y &= Z\sin \theta_0 - W\cos \theta_0 \triangleq Q(Z,W)
-\end{aligned}
-$$
+
+$X = Z\cos \theta_0 + W \sin \theta_0 \triangleq P(Z,W)$ 
+
+$Y = Z\sin \theta_0 - W\cos \theta_0 \triangleq Q(Z,W)$
+
 por tanto
 
 $$
 \vert J(z,w) \vert = \left\vert \mathrm{det} 
 \begin{pmatrix}
-\frac{\partial P}{\partial z} & \frac{\partial P}{\partial w} \\$0.5em]
+\frac{\partial P}{\partial z} & \frac{\partial P}{\partial w} \\
 \frac{\partial Q}{\partial z} & \frac{\partial Q}{\partial w}
 \end{pmatrix}
 \right\vert
 = \left\vert \mathrm{det} 
 \begin{pmatrix}
-\cos\theta_0 & \sin\theta_0 \\$0.5em]
+\cos\theta_0 & \sin\theta_0 \\
 \sin\theta_0 & -\cos\theta_0
 \end{pmatrix}
 \right\vert
@@ -165,13 +172,13 @@ Luego,
 $$
 \vert J(r,\theta) \vert = \left\vert \mathrm{det} 
 \begin{pmatrix}
-\frac{\partial P}{\partial r} & \frac{\partial P}{\partial \theta} \\$0.5em]
+\frac{\partial P}{\partial r} & \frac{\partial P}{\partial \theta} \\
 \frac{\partial Q}{\partial r} & \frac{\partial Q}{\partial \theta}
 \end{pmatrix}
 \right\vert
 = \left\vert \mathrm{det} 
 \begin{pmatrix}
-\cos\theta & -r\sin\theta \\$0.5em]
+\cos\theta & -r\sin\theta \\
 \sin\theta & r\cos\theta
 \end{pmatrix}
 \right\vert
@@ -208,28 +215,32 @@ $$
 
 ![dx/dy](images/11_dx_dy.svg)
 
-La probabilidad correspondiente a un área elemental $\di{x}\di{y}$ en el plano $XY$ localizado en el punto $(x,y)$ es {\color{AzulUCR}{$f_{X,Y} \di{x}\di{y}$}}. Si se suma todas las probabilidades sobre la región donde $x+y \leq w$ se obtendrá $F_{W}(w)$:
+La probabilidad correspondiente a un área elemental $\mathrm{d}{x}\mathrm{d}{y}$ en el plano $XY$ localizado en el punto $(x,y)$ es  $f_{X,Y} \mathrm{d}{x}\mathrm{d}{y}$. Si se suma todas las probabilidades sobre la región donde $x+y \leq w$ se obtendrá $F_{W}(w)$:
 
 $$
-F_{W}(w) = \int_{-\infty}^{\infty}\int_{x = -\infty}^{w-y}f_{X,Y}(x,y)\di{x}\di{y}
+F_{W}(w) = \int_{-\infty}^{\infty}\int_{x = -\infty}^{w-y}f_{X,Y}(x,y)\mathrm{d}{x}\mathrm{d}{y}
 $$
 
 Como $X$ y $Y$ son independientes, es decir, $f_{X,Y}(x,y) = f_X(x) f_Y(y)$, entonces,
 
 $$
-F_{W}(w) = \int_{-\infty}^{\infty}f_{Y}(y)\int_{x=-\infty}^{w-y}f_{X}(x)\di{x}\di{y}
+F_{W}(w) = \int_{-\infty}^{\infty}f_{Y}(y)\int_{x=-\infty}^{w-y}f_{X}(x)\mathrm{d}{x}\mathrm{d}{y}
 $$
 
 Después de derivar, usando la regla de Leibniz, se obtiene la función de densidad:
 
 $$
-f_{W}(w) = \int_{-\infty}^{\infty}f_{Y}(y)f_{X}(w-y)\di{y}
+f_{W}(w) = \int_{-\infty}^{\infty}f_{Y}(y)f_{X}(w-y)\mathrm{d}{y}
 $$
 
 que describe una **integral de convolución**, por tanto: 
 
-**La función de densidad de la suma...**
+
+```markdown
+!!! tip "La función de densidad de la suma..." 
+
 ...de dos variables aleatorias estadísticamente independientes es la convolución de sus funciones de densidad individuales.
+```
 
 # Ejemplo de la suma de dos variables aleatorias
 
@@ -249,16 +260,19 @@ Este ejercicio se puede resolver mediante la integral de convolución o mediante
 Se tiene entonces:
 
 $$
-\mathcal{L}\{ f_{X}(x) \} = \int_{0}^{a}\frac{1}{a}e^{-sx}dx 
+\mathcal{L}\{f_X(x)\} = \int_0^a \frac{1}{a} e^{-sx} dx
 $$
+
 $$
-= \left( \frac{1}{a} \right) \left. \frac{e^{-sx}}{-s} \right|_{0}^{a} 
+= \left(\frac{1}{a}\right) \frac{e^{-sx}}{-s} \Bigg|_0^a
 $$
+
 $$
-= \left( \frac{1}{as} \right) \left[ 1 - e^{-as} \right] 
+= \left(\frac{1}{as}\right) [1 - e^{-as}]
 $$
+
 $$
-\mathcal{L}\{ f_{Y}(y) \} = \left( \frac{1}{bs} \right) \left[ 1 - e^{-bs} \right]
+\mathcal{L}\{f_Y(y)\} = \left(\frac{1}{bs}\right) [1 - e^{-bs}]
 $$
 
 La transformada de Laplace de una integral de convolución es igual al producto de las transformadas de Laplace de las funciones que conforman el integrando de tal integral. El próximo paso es entonces encontrar el producto de las dos transformadas de Laplace calculadas para luego encontrar la transformada de Laplace inversa y así hallar la nueva función de densidad, correspondiente a la nueva variable aleatoria $W$.
@@ -286,11 +300,13 @@ $$
 Nótese que se ha hecho cambios de variable para emplear correctamente la transformada de Laplace. Finalmente, dado que el resultado debe ser una función de densidad, una prueba que se puede hacer para probar si el resultado es correcto, es comprobar que el área bajo la curva de la nueva función es en efecto igual a la unidad.
 
 # Suma de varias variables aleatorias
+ 
+```markdown
+!!! tip "La función de densidad de la suma de varias variables aleatorias" 
 
-**La función de densidad de la suma de varias variables aleatorias**  
-La función de densidad de \$ Y = X_1 + X_2 + \cdots + X_N \$, donde las \$ X_i \$ son variables aleatorias estadísticamente independientes entre sí, es la convolución de las \$ N \$ funciones de densidad individuales: 
+La función de densidad de $Y = X_1 + X_2 + \cdots + X_N$, donde las \$X_i\$ son variables aleatorias estadísticamente independientes entre sí, es la convolución de las \$N\$ funciones de densidad individuales: 
 
 $$
 f_{Y}(y) = f_{X_N}(x_N) \ast f_{X_{N-1}}(x_{N-1}) \ast \cdots \ast f_{X_1}(x_1)
 $$
-
+```
