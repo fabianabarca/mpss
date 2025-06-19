@@ -21,6 +21,7 @@ $$
 E[X + Y] = \int_0^1 \int_0^1 (x + y) \, \mathrm{d}x \, \mathrm{d}y = 1
 $$
 
+![Figura: valor esperado](https://raw.githubusercontent.com/nicoleMena/mpss/transcripcion_C14663/docs/images/valor-esperado-fig-1.svg)
 
 # Sección 2: Momentos conjuntos alrededor del origen
 
