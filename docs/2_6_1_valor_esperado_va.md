@@ -18,7 +18,7 @@ El valor esperado de una variable aleatoria es uno de los resultados más import
 
     **¿Cuál valor de $X$ esperaríamos si elegimos un niño(a) al azar?**
 
-![Distribución Apgar](images/apgar.svg)
+![Distribución Apgar](images/6_escala_apgar.svg)
 
 !!! important "Definición"
 
@@ -26,7 +26,7 @@ El valor esperado de una variable aleatoria es uno de los resultados más import
 
 > Un promedio puede verse como "el número más cercano a todos los números del conjunto, en el sentido de que la suma de las distancias desde él a todos los puntos es la más pequeña". Similar a un *centro de gravedad*.
 
-![PDF y valor esperado como centro de gravedad](images/esperado_promedio.svg)
+![PDF y valor esperado como centro de gravedad](images/6_pdf_rayleigh.svg)
 
 ## Valor esperado de una variable aleatoria continua
 
@@ -61,6 +61,15 @@ Este valor se obtiene utilizando la función de densidad $f_X(x)$, que asigna un
 
 Si $X$ es discreta con valores $x_i$ y probabilidades $P(x_i)$:
 
+\[
+E[X] = \int_{-\infty}^{\infty} x \sum_{i=1}^{N} P(x_i)\, \delta(x - x_i)\, dx
+\]
+
+\[
+= \sum_{i=1}^{N} P(x_i) \int_{-\infty}^{\infty} x\, \delta(x - x_i)\, dx = \sum_{i=1}^{N} x_i P(x_i)
+\]
+
+
 $$E[X] = \sum_{i=1}^N x_i P(x_i)$$
 
 !!! tip "Valor esperado de una variable aleatoria discreta"
@@ -75,7 +84,7 @@ Si la función de densidad es simétrica alrededor de $x = a$, entonces:
 
 $$E[X] = a \quad \text{si} \quad f_X(x + a) = f_X(-x + a)$$
 
-![PDF simétrica](images/pdf_simetrica.svg)
+![PDF simétrica](images/6_pdf_simetrica.svg)
 
 # Valor esperado de una función, $E[g(X)]$
 
@@ -105,20 +114,25 @@ Si $X$ es discreta:
     \end{cases}
     $$
 
-    - Promedio de la corriente:
+    ¿Cuál es el valor esperado de la corriente $I$? ¿Y de la potencia $P = I^2 R$ si $R = 1\,\Omega$?
 
-    $$
-    E[I] = \int_{1}^{3} i \cdot \frac{1}{2} \, \mathrm{d}i = 2~A
-    $$
+**Solución:**
 
-    - Potencia disipada: $P = I^2 R$, con $R = 1\,\Omega$
+- Promedio de la corriente:
 
-    $$
-    E[P] = \int_{1}^{3} i^2 \cdot \frac{1}{2} \, \mathrm{d}i = \frac{13}{3} \approx 4.33~W
-    $$
+\[
+E[I] = \int_{1}^{3} i \cdot \frac{1}{2} \, \mathrm{d}i = \left. \frac{1}{4} i^2 \right|_1^3 = \frac{9 - 1}{4} = 2~A
+\]
 
-![PDF corriente uniforme](images/corriente_uniforme.svg)
-![Potencia cuadrática](images/potencia_cuadratica.svg)
+- Potencia disipada:
+
+\[
+E[P] = \int_{1}^{3} i^2 \cdot \frac{1}{2} \, \mathrm{d}i = \left. \frac{1}{6} i^3 \right|_1^3 = \frac{27 - 1}{6} = \frac{26}{6} \approx 4.33~W
+\]
+
+![PDF corriente uniforme](images/6_prom_corriente.svg)  
+![Potencia cuadrática](images/6_prom_potencia.svg)
+
 
 # Valor esperado condicional, $E[X\mid B]$
 
@@ -151,4 +165,4 @@ $$
 
 > Este es el valor esperado de $X$ restringido al conjunto $\{X \leq b\}$.
 
-![Visualización de $\{X \leq b\}$](images/X_leq_b.svg)
+![Visualización de $\{X \leq b\}$](images/6_X_leq_b.svg)
