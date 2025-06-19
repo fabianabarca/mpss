@@ -18,15 +18,11 @@ $$
 **Valor esperado de una función de variables aleatorias**
 
 El PDF conjunto de la cantidad \( X \) de almendras y la cantidad \( Y \) de semillas de marañón (y la cantidad \( Z \) de maní) en un tarro de 1 kg es:
-\[
-\begin{cases}
-0 \leq x \leq 1, \\
-0 \leq y \leq 1, \\
-x + y \leq 1,
-\end{cases}
-\]
+Sean los valores de \(x\) y \(y\) tales que:
 
-
+- x está entre 0 y 1,
+- y está entre 0 y 1,
+- y la suma x + y es menor o igual que 1.
 
 $$
 f_{X,Y}(x, y) = 24xy
@@ -66,13 +62,6 @@ que representa los costos esperados del contenido de la caja.
 
 
 
-
-
-
-
-
-
-
 # Sección 2: Momentos conjuntos alrededor del origen
 
 Los momentos conjuntos alrededor del origen miden el comportamiento combinado de dos variables aleatorias.
@@ -89,9 +78,9 @@ Estos momentos permiten analizar características como la dispersión y forma co
 - $\mu'_{01} = E[Y]$: esperanza de $Y$
 - $\mu'_{11} = E[XY]$: producto esperado
 
-**Ejemplo:**  
+# Ejemplo de la ubicación del “centro de gravedad” I:
 
-![Ejemplo: Gravedad](./images/10_gravedad.svg)
+![Ejemplo: Gráfica de gravedad](./images/10_gravedad.svg)
 
 
 # Sección 3: La correlación
@@ -126,5 +115,31 @@ donde $\sigma_X$ y $\sigma_Y$ son las desviaciones estándar de $X$ y $Y$.
 - $\rho_{X,Y} = -1$: correlación negativa perfecta  
 - $\rho_{X,Y} = 0$: sin correlación lineal
 
-**Ejemplo:**  
+
+# Ejemplo de correlación del tarro de nueces I
+El PDF conjunto de la cantidad X de almendras, la cantidad Y de semillas de marañón y la cantidad Z de maní en un tarro de 1 kg está dado por:
+
+Sea f_{X,Y}(x, y) = 24xy  en el dominio:
+- x está entre 0 y 1,
+- y está entre 0 y 1,
+- y la suma x + y es menor o igual que 1.
+
+¿Cuál es la correlación entre X y Y?
+
+
+![Fórmula en blanco](https://latex.codecogs.com/svg.image?\color{white}R_{XY}=m_{11}=E[XY]=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xy\,f_{X,Y}(x,y)\,dx\,dy)
+
+
+$$
+= \int_0^1 \int_0^{1-y} xy \cdot 24xy \, dx \, dy = 24 \int_0^1 y^2 \left( \int_0^{1-y} x^2 \, dx \right) dy
+$$
+
+$$
+= \frac{24}{3} \int_0^1 y^2 (1 - y)^3 \, dy
+$$
+
+$$
+= \frac{24}{3} \left[ -\frac{y^6}{6} + \frac{3y^5}{5} - \frac{3y^4}{4} + \frac{y^3}{3} \right]_0^1 = \frac{2}{15} \approx 0{,}13
+$$
+
 
