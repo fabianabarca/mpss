@@ -1,10 +1,3 @@
-### Presentación
-
-[4 - Variables aleatorias](https://www.overleaf.com/read/tqgnrvbdpdvr#f90d57)
-
-### Secciones
-- Función de probabilidad acumulativa (13 - 24)
-
 # Las funciones de distribución de una variable aleatoria
 
 ## Importancia de las funciones de distribución de una variable aleatoria
@@ -30,7 +23,8 @@ Si la probabilidad $P\{X \le x\}$ es la probabilidad del evento $\{X \le x\}$, e
 \boxed{F_{X}(x) = P(X \le x)}
 \]
 
-se le llama *función de distribución de probabilidad acumulativa* de la variable aleatoria $X$. El argumento $x$ es cualquier número real entre $-\infty$ y $\infty$.
+!!! tip "Función de distribución de probabilidad acumulativa"
+    se le llama *función de distribución de probabilidad acumulativa* de la variable aleatoria $X$. El argumento $x$ es cualquier número real entre $-\infty$ y $\infty$.
 
 ![Conjunto \{X ≤ x\} en la recta real](images/6_X_leq_b.svg)  
 *Visualización de $\{X \le x\}$ en la recta real.*
