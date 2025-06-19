@@ -65,20 +65,26 @@ que representa los costos esperados del contenido de la caja.
 # Sección 2: Momentos conjuntos alrededor del origen
 
 Los momentos conjuntos alrededor del origen miden el comportamiento combinado de dos variables aleatorias.
+Para dos variables aleatorias  X  y  Y  se denotan por mₙₖ = E[XⁿYᵏ]
+ y se definen por:
 
-Se definen como:
+![Fórmula blanca](https://latex.codecogs.com/svg.image?\color{white}m_{nk}=\mathbb{E}\left[X^nY^k\right]=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x^n&space;y^k&space;f_{X,Y}(x,y)\,&space;dx&space;\,&space;dy)
 
-$$
-\mu'_{rs} = E[X^r Y^s]
-$$
+### Casos especiales
 
-Estos momentos permiten analizar características como la dispersión y forma conjunta de la distribución. Por ejemplo:
+- ![m_n0](https://latex.codecogs.com/svg.image?\color{white}m_{n0}=\mathbb{E}[X^n]) son los momentos ![m_n](https://latex.codecogs.com/svg.image?\color{white}m_n) de ![X](https://latex.codecogs.com/svg.image?\color{white}X)
+- ![m_0k](https://latex.codecogs.com/svg.image?\color{white}m_{0k}=\mathbb{E}[Y^k]) son los momentos de ![Y](https://latex.codecogs.com/svg.image?\color{white}Y)
+- ![n+k](https://latex.codecogs.com/svg.image?\color{white}n&plus;k) es el orden de los momentos. Ejemplo: 
+  ![m_02](https://latex.codecogs.com/svg.image?\color{white}m_{02}), 
+  ![m_20](https://latex.codecogs.com/svg.image?\color{white}m_{20}), 
+  ![m_11](https://latex.codecogs.com/svg.image?\color{white}m_{11}) 
+  son los momentos de segundo orden de ![X](https://latex.codecogs.com/svg.image?\color{white}X) y ![Y](https://latex.codecogs.com/svg.image?\color{white}Y)
+- ![m_01](https://latex.codecogs.com/svg.image?\color{white}m_{01}=\mathbb{E}[Y]=\overline{Y}) y 
+  ![m_10](https://latex.codecogs.com/svg.image?\color{white}m_{10}=\mathbb{E}[X]=\overline{X}) 
+  son los valores esperados de ![Y](https://latex.codecogs.com/svg.image?\color{white}Y) y ![X](https://latex.codecogs.com/svg.image?\color{white}X), y son las coordenadas del centro de gravedad de la función 
+  ![f_XY](https://latex.codecogs.com/svg.image?\color{white}f_{X,Y}(x,y))
 
-- $\mu'_{10} = E[X]$: esperanza de $X$
-- $\mu'_{01} = E[Y]$: esperanza de $Y$
-- $\mu'_{11} = E[XY]$: producto esperado
-
-# Ejemplo de la ubicación del “centro de gravedad” I:
+**Ejemplo de la ubicación del “centro de gravedad” I:**
 
 ![Ejemplo: Gráfica de gravedad](./images/10_gravedad.svg)
 
@@ -87,33 +93,17 @@ Estos momentos permiten analizar características como la dispersión y forma co
 
 La covarianza entre dos variables aleatorias mide cómo varían ambas respecto a sus medias.
 
-Se define como:
+El momento de segundo orden  m₁₁ = E[XY] es denominado la **correlación** de X y  Y.  
+Recibe el símbolo especial Rₓᵧ por su importancia.
 
 $$
-\text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])] = E[XY] - E[X]E[Y]
+R_{XY} = m_{11} = E[XY] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} xy \, f_{X,Y}(x, y) \, dx \, dy
 $$
 
-**Criterios:**
+### Interpretaciones posibles
 
-- Si la covarianza es positiva, $X$ y $Y$ tienden a aumentar juntos.  
-- Si es negativa, uno tiende a aumentar cuando el otro disminuye.  
-- Si es cero, no hay relación lineal.
-
-**No correlación:** Si $\text{Cov}(X, Y) = 0$, entonces no hay correlación lineal entre $X$ y $Y$, pero esto no implica independencia.
-
-La correlación es la forma normalizada de la covarianza:
-
-$$
-\rho_{X,Y} = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}
-$$
-
-donde $\sigma_X$ y $\sigma_Y$ son las desviaciones estándar de $X$ y $Y$.
-
-**Interpretación de $\rho_{X,Y}$:**
-
-- $\rho_{X,Y} = 1$: correlación positiva perfecta  
-- $\rho_{X,Y} = -1$: correlación negativa perfecta  
-- $\rho_{X,Y} = 0$: sin correlación lineal
+- “La correlación es el grado en el cual dos o más cantidades están linealmente asociadas”.
+- Pero (fundamental) **“correlación no implica causalidad”**.
 
 
 # Ejemplo de correlación del tarro de nueces I
@@ -141,5 +131,3 @@ $$
 $$
 = \frac{24}{3} \left[ -\frac{y^6}{6} + \frac{3y^5}{5} - \frac{3y^4}{4} + \frac{y^3}{3} \right]_0^1 = \frac{2}{15} \approx 0{,}13
 $$
-
-
