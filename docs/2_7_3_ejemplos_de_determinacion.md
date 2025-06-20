@@ -1,38 +1,32 @@
-### Presentación
 
-[7 - Funciones que dan momentos](https://www.overleaf.com/read/cgwskrxfpkps#713512)
-
-### Presentación
-
-[7 - Funciones que dan momentos](https://www.overleaf.com/read/cgwskrxfpkps#713512)
----
-
----
-
-# Ejemplo de determinación de la función característica I
-
-Se define una variable aleatoria discreta $Y$ con la función de densidad probabilística
-
-$$
-\begin{aligned}
-  f_{Y}(y) = & P\{ X \leq x_{1} \}\delta(y-1) \\ 
-  & + P\{ x_{1} < X \leq x_{2} \} \delta(y-2) \\ 
-  & + P\{ x_{2} < X \leq x_{3} \}\delta(y-3) \\ 
-  & + P\{ x_{3} < X < \infty \}\delta(y-4)    
-\end{aligned}
-$$ 
-
-*donde $X$ es una variable aleatoria gaussiana de media 50 y desviación estándar $\sigma = 10$, con $x_{1} = 25$; $x_{2} = 40$ y $x_{3} = 60$.*
+# Ejemplo de determinación de la función característica 
 
 
-1. Graficar $\displaystyle f_{Y}(y)$ utilizando los valores de probabilidades.  
+:material-pencil-box: **EJEMPLO**
 
-2. Calcular la función característica de la variable aleatoria $Y$.  
+!!! example "Ejemplo de determinación de la función característica"
 
-3. Calcular $\displaystyle E[Y^2]$ y la varianza.  
+    Se define una variable aleatoria discreta $Y$ con la función de densidad probabilística:
+
+    $$
+    \begin{aligned}
+      f_{Y}(y) =\ & P\{ X \leq x_{1} \}\delta(y-1) \\
+                 & + P\{ x_{1} < X \leq x_{2} \} \delta(y-2) \\
+                 & + P\{ x_{2} < X \leq x_{3} \}\delta(y-3) \\
+                 & + P\{ x_{3} < X < \infty \}\delta(y-4)    
+    \end{aligned}
+    $$
+
+    donde $X$ es una variable aleatoria gaussiana de media 50 y desviación estándar $\sigma = 10$, con $x_{1} = 25$, $x_{2} = 40$ y $x_{3} = 60$.
+
+    Se solicita:
+
+    1. Graficar $\displaystyle f_{Y}(y)$ utilizando los valores de probabilidades.
+    2. Calcular la función característica de la variable aleatoria $Y$.
+    3. Calcular $\displaystyle E[Y^2]$ y la varianza.
 
 ---
-# Ejemplo de determinación de la función característica II
+
 
 **Parte 1:** Graficar $f_{Y}(y)$ utilizando los valores correspondientes de probabilidades. 
 
@@ -48,7 +42,7 @@ $$
 
 ---
 
-# Ejemplo de determinación de la función característica III
+
 
 - $P\{ X \leq 25 \} = F_X(25) = F_Z(-2.50) = 1 - F_Z(2.50) = 1 - 0.9938 = \mathbf{0.0062}$
 - $P\{ 25 < X \leq 40 \} = F_X(40) - F_X(25) = \mathbf{0.1525}$
@@ -68,14 +62,14 @@ $$
 
 ---
 
-# Ejemplo de determinación de la función característica IV
+
 
 ![Función de densidad en t=1](images/7_pdf_discreta.svg)
 
 Figura: Función de densidad discreta (PMF) de la va Y (no está a escala).
 
 
-# Ejemplo de determinación de la función característica V
+
 
 **Parte 2:** Calcular la función característica de la variable aleatoria $Y$
 
@@ -100,7 +94,6 @@ $$
 $$
 
 ---
-# Ejemplo de determinación de la función característica VI
 
 ### Recordatorio sobre la función impulso
 
@@ -128,7 +121,6 @@ $$
 
 ---
 
-# Ejemplo de determinación de la función característica VII
 
 
 Continuando, se determina entonces:
@@ -147,12 +139,4 @@ $$
 $$
 
 Que es la función característica de $Y$.    
-
-
-### Secciones
-- Ejemplo de determinación de la función característica I-VII (18 - 24)
-
-
-### Secciones
-- Ejemplo de determinación de la función característica I-VII (18 - 24)
 
