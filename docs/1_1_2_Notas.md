@@ -59,7 +59,10 @@ P\left( \bigcup_{n=1}^{N} A_{n}\right) = \sum_{n=1}^{N} P(A_{n})
 \end{matrix}
 \end{equation}
 
-## Ejemplo del lanzamiento de dos dados I
+:material-pencil-box:
+**EJEMPLO**
+
+!!! example "Ejemplo del lanzamiento de dos dados" 
 
 
 Observar la suma de dos dados que se lanzan
@@ -95,10 +98,6 @@ C &= \lbrace 10 < \text{suma} \rbrace
 \end{aligned}
 \]
 
-
-
-## Ejemplo del lanzamiento de dos dados II
-
 Asumiendo que $(P(A_{ij}) = 1/36)$ y dado que los eventos $(A_{ij})$, $(i,j = 1, 2, \ldots, N = 6)$, son mutuamente excluyentes, estos deben satisfacer el tercer axioma.
 
 \[
@@ -110,9 +109,6 @@ P(A) &= P\left( \bigcup_{i = 1}^{6}A_{i,7-i} \right) = \sum_{i=1}^{6}P(A_{i,7-i}
 
 donde 6 es el número de elementos que satisfacen $\bigcup_{i = 1}^{6}A_{i,7-i}$ (observable en la tabla anterior) y 36 es el número de eventos posibles ($n(S)$, la cardinalidad del conjunto universal).
 
----
-
-## Ejemplo del lanzamiento de dos dados III
 
 Con $(B)$, hay 9 elementos que satisfacen el requisito $(B = \lbrace 8 < \text{suma} \leq 11 \rbrace)$
 
@@ -124,8 +120,6 @@ P(B) &= P\left\lbrace \left( \bigcup_{i = 3}^{6}A_{i,9-i} \right) \cup \left( \b
 \end{aligned}
 \]
 
-
-## Ejemplo del lanzamiento de dos dados IV 
 
 En $(C)$ es fácil observar que hay solo 3 resultados elementales coincidentes, por lo que:
 
@@ -152,9 +146,12 @@ B = \lbrace 8 < \text{suma} \leq 11 \rbrace \qquad
 C = \lbrace 10 < \text{suma} \rbrace
 \]
 
+!!! note 
+
+    Respuesta: La probabilidad de estos eventos es 5/18
 
 
-## Consecuencias lógicas de la definición axiomática I
+## Consecuencias lógicas de la definición axiomática 
 ### Definición axiomática según Kolmogorov
  
 
@@ -190,9 +187,6 @@ $$
 pero \( A \cup \emptyset = A \), y así debe cumplirse que: $\boxed{P(\emptyset) = 0}$
 
 
-## Consecuencias lógicas de la definición axiomática II
-### Definición axiomática según Kolmogorov
-
 **3.** Si $A$ y $B$ no son mutuamente exclusivos, ¿cuál es la probabilidad $P(A \cup B)$?  
   Para resolverlo, se debe volver a expresar esa unión en términos de **conjuntos ME** (mutuamente excluyentes), de forma que se pueda utilizar el tercer axioma de la probabilidad.
 
@@ -218,10 +212,6 @@ B = S \cap B = (A \cup \overline{A}) \cap B = AB \cup \overline{A}B
 \tag{8}
 \label{E:identidadB}
 \]
-
-
-## Consecuencias lógicas de la definición axiomática III
-### Definición axiomática según Kolmogorov
 
 Si \( AB \) y \(\overline{A}B\) son mutuamente excluyentes (ME), se aplica el tercer axioma \eqref{E:terceraxioma},
 
@@ -258,9 +248,12 @@ P(\emptyset) = 0
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
 \]
 
+:material-pencil-box:
+**EJEMPLO**
 
-## Ejemplo del lanzamiento de una moneda I
-### Definición axiomática según Kolmogorov
+!!! example "Ejemplo del lanzamiento de una moneda"
+
+##Definición axiomática según Kolmogorov
 
 
 Tirar una moneda "justa" indefinidamente y definir el evento \( A \) como
@@ -281,10 +274,6 @@ A_n &= \lbrace \text{escudo aparece por primera vez} \\
 \end{aligned}
 \]
 
----
-
-## Ejemplo del lanzamiento de una moneda II
-### Definición axiomática según Kolmogorov
 
 Si \(A_i \cap A_j = \emptyset\) para \(1\leq i,j \leq n\) (porque cada uno es una secuencia distinta, única):
 
@@ -306,3 +295,5 @@ A = A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_i \cup \cdots = \bigcup_{n=1}^{\inf
 \]
 
 es decir: "en alguno pega", eventualmente.
+
+!!!note ""
