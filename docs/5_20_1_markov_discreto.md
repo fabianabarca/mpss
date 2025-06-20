@@ -1,10 +1,3 @@
-### Presentación
-
-[20 - Cadenas de Markov en tiempo discreto](https://www.overleaf.com/read/jmzgnjrhfhnj#806886)
-
-### Secciones
-- Cadenas de Markov en tiempo discreto (1 - 18)
-
 ## Condiciones
 * Considérese un sistema que puede estar en cualquiera de varios estados.
 * El conjunto de estados es denominado el espacio de estados *S* y se supondrá en general que *S = {0, 1, 2, ..., N}*.
@@ -63,12 +56,7 @@ Si la partícula está en el estado *i* al tiempo *t*, estará en el estado *j* 
     <p align="center">
     ![Cadena de Markov de tiempo discreto.](images/20_cadena_markov_discreta.svg)
     </p>
-
-:material-pencil-box: **EJEMPLO 2**
-
-!!! example "Cadena de Markov de tiempo discreto"
-    Sea *S = {0, 1}* con probabilidades de transición dadas por: 
-
+    
     También se suele representar la misma información dada en la ecuación
 
     \begin{equation*}
